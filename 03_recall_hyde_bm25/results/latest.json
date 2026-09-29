@@ -1,0 +1,788 @@
+{
+  "meta": {
+    "run_id": "20260916T183926Z",
+    "design": "local recall only: HyDE+BM25 on query_original",
+    "dataset": "/home/xelan/Documentos/Github/Tesis/CentinelaV3/search-service/dataset_qg_qa_sintetico.json",
+    "top_k": 3,
+    "ollama_model": "qwen2.5:1.5b",
+    "ollama_host": "http://127.0.0.1:11434",
+    "n_queries": 30,
+    "print_summary": true
+  },
+  "results": [
+    {
+      "query_id": "q0",
+      "query_original": "retrieval augmented generation",
+      "expected_doc_ids": [
+        "doc_global_1",
+        "doc_global_2",
+        "doc_global_3"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_9",
+        "doc_global_137",
+        "doc_global_21"
+      ],
+      "retrieved_titles": [
+        "A Hybrid Approach to Information Retrieval and Answer Generation for Regulatory Texts",
+        "Automated Software Testing Using Generative Ai And Large Language Models",
+        "Bridging the Question–Answer Gap in Retrieval-Augmented Generation: Hypothetical Prompt Embeddings"
+      ],
+      "hits": 0,
+      "n_expected": 3,
+      "recall_at_k": 0.0,
+      "hyde_query": "retrieval augmented generation\nThis study investigates the integration of retrieval-based techniques with generative language models to enhance the performance of language generation tasks. Results show significant improvements in accuracy and efficiency, particularly in generating coherent and contextually relevant text. The findings suggest a promising avenue for future research into hybrid AI systems that leverage both retrieval and generative models to address a wide range of natural language processing challenges.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2947.45
+    },
+    {
+      "query_id": "q1",
+      "query_original": "dense passage retrieval",
+      "expected_doc_ids": [
+        "doc_global_4",
+        "doc_global_5",
+        "doc_global_6"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_5",
+        "doc_global_4",
+        "doc_global_6"
+      ],
+      "retrieved_titles": [
+        "RocketQA: An Optimized Training Approach to Dense Passage Retrieval for Open-Domain Question Answering",
+        "Dense Passage Retrieval for Open-Domain Question Answering",
+        "RocketQAv2: A Joint Training Method for Dense Passage Retrieval and Passage Re-ranking"
+      ],
+      "hits": 3,
+      "n_expected": 3,
+      "recall_at_k": 1.0,
+      "hyde_query": "dense passage retrieval\nOur study investigates the application of deep learning techniques in the domain of information retrieval, focusing on dense passage retrieval. Leveraging transformer-based models, we aim to enhance the accuracy of finding relevant passages within a document corpus. Experimental results demonstrate significant improvements in retrieval quality and efficiency, indicating a promising future in leveraging deep learning for more efficient information extraction tasks.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 1479.37
+    },
+    {
+      "query_id": "q2",
+      "query_original": "hybrid search in information retrieval",
+      "expected_doc_ids": [
+        "doc_global_7",
+        "doc_global_8",
+        "doc_global_9"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_16",
+        "doc_global_14",
+        "doc_global_15"
+      ],
+      "retrieved_titles": [
+        "Context is King: Rethinking Query Expansion in Modern Search Engines",
+        "Integrating Deep Learning Techniques in Information Retrieval: A Hybrid Approach to Relevance Optimization",
+        "A Method for Improving Retrieval Effectiveness in RAG"
+      ],
+      "hits": 0,
+      "n_expected": 3,
+      "recall_at_k": 0.0,
+      "hyde_query": "hybrid search in information retrieval\nHybrid search in information retrieval: A Comparative Analysis and Evaluation. Hybrid search methods combine traditional and advanced retrieval techniques to enhance the accuracy and relevance of information retrieval systems. This paper examines different hybrid search approaches, including query refinement, document ranking, and user feedback, to evaluate their performance on a diverse set of real-world datasets. The results reveal that while traditional search methods still dominate, hybrid approaches can significantly improve retrieval effectiveness, especially in handling complex queries and diverse information sources. The study concludes with a comprehensive discussion of the implications for future research and practical applications, emphasizing the importance of considering multiple factors when designing hybrid search systems.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2470.94
+    },
+    {
+      "query_id": "q3",
+      "query_original": "vector database indexing algorithms",
+      "expected_doc_ids": [
+        "doc_global_10",
+        "doc_global_11",
+        "doc_global_12"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_10",
+        "doc_global_11",
+        "doc_global_12"
+      ],
+      "retrieved_titles": [
+        "Database Indexing Using Deep Learning Algorithms",
+        "Semantic Search with Vector Database: A Comprehensive Review of Models, Indexing and Applications",
+        "Survey of vector database management systems"
+      ],
+      "hits": 3,
+      "n_expected": 3,
+      "recall_at_k": 1.0,
+      "hyde_query": "vector database indexing algorithms\nIn this study, we explore the comparative evaluation of vector database indexing algorithms aimed at optimizing query performance and reducing storage overhead, focusing on their effectiveness in supporting complex retrieval tasks and their impact on the overall system efficiency.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 976.21
+    },
+    {
+      "query_id": "q4",
+      "query_original": "bm25 text retrieval optimization",
+      "expected_doc_ids": [
+        "doc_global_13",
+        "doc_global_14",
+        "doc_global_15"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_13",
+        "doc_global_15",
+        "doc_global_14"
+      ],
+      "retrieved_titles": [
+        "Optimized Spoken Query Cross-Lingual Document Retrieval using BM25 and Neural Re-Ranking with AdamW",
+        "A Method for Improving Retrieval Effectiveness in RAG",
+        "Integrating Deep Learning Techniques in Information Retrieval: A Hybrid Approach to Relevance Optimization"
+      ],
+      "hits": 3,
+      "n_expected": 3,
+      "recall_at_k": 1.0,
+      "hyde_query": "bm25 text retrieval optimization\nThe paper presents an advanced optimization technique for the term frequency-inverse document frequency (TF-IDF) based term weighting mechanism in the context of BM25 text retrieval algorithm, aiming to enhance retrieval effectiveness and efficiency. The proposed method, dubbed \"BM25 Text Retrieval Optimization (BM25-TRON)\", integrates various enhancements to refine the BM25 model, thereby improving the relevance and precision of document retrieval. The methodology leverages machine learning algorithms and advanced statistical analysis to identify and mitigate the negative effects of the original BM25 model on retrieval performance, ultimately leading to more accurate and effective results. Through rigorous testing on a diverse dataset, BM25-TRON demonstrates a significant improvement in retrieval accuracy and efficiency, making it a valuable",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2978.56
+    },
+    {
+      "query_id": "q5",
+      "query_original": "query expansion techniques in search engines",
+      "expected_doc_ids": [
+        "doc_global_16",
+        "doc_global_17",
+        "doc_global_18"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_18",
+        "doc_global_16",
+        "doc_global_10"
+      ],
+      "retrieved_titles": [
+        "BERT-Embedding and Citation Network Analysis based Query Expansion Technique for Scholarly Search",
+        "Context is King: Rethinking Query Expansion in Modern Search Engines",
+        "Database Indexing Using Deep Learning Algorithms"
+      ],
+      "hits": 2,
+      "n_expected": 3,
+      "recall_at_k": 0.6667,
+      "hyde_query": "query expansion techniques in search engines\nThe purpose of this study is to explore and evaluate different query expansion techniques employed in search engine optimization, focusing on their impact on improving search accuracy and relevance. The research methodology includes a comprehensive review of existing literature, analysis of algorithms and methodologies utilized in current query expansion systems, and the implementation of a series of experiments to assess the effectiveness of various techniques. The findings suggest that incorporating synonyms, stemming, and proximity search are effective in enhancing the relevance of search results, while semantic analysis and context-aware query expansion show the most promising results in improving overall search quality. The study concludes that a combination of these techniques offers the most comprehensive solution for query expansion in search engines.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2567.86
+    },
+    {
+      "query_id": "q6",
+      "query_original": "hypothetical document embeddings hyde",
+      "expected_doc_ids": [
+        "doc_global_19",
+        "doc_global_20",
+        "doc_global_21"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_19",
+        "doc_global_21",
+        "doc_global_20"
+      ],
+      "retrieved_titles": [
+        "SC-HyDE: Mitigating Hallucinations in Chinese Legal Question Answering via Self-Corrected Hypothetical Document Embeddings",
+        "Bridging the Question–Answer Gap in Retrieval-Augmented Generation: Hypothetical Prompt Embeddings",
+        "Evaluation of Hypothetical Document and Query Embeddings for Information Retrieval Enhancements in the Context of Diverse User Queries"
+      ],
+      "hits": 3,
+      "n_expected": 3,
+      "recall_at_k": 1.0,
+      "hyde_query": "hypothetical document embeddings hyde\nThis paper introduces a novel method for generating document embeddings using hypothetical document embeddings as input, leveraging the power of neural networks to learn hierarchical representations of text. The method, termed \"Hyde,\" aims to enhance the retrieval capabilities of search engines by incorporating semantic relationships between documents. Experimental results demonstrate improved performance in document similarity and keyword extraction tasks compared to state-of-the-art techniques, highlighting the potential of this approach for enhancing the effectiveness of information retrieval systems.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 1797.06
+    },
+    {
+      "query_id": "q7",
+      "query_original": "reranking models for information retrieval",
+      "expected_doc_ids": [
+        "doc_global_22",
+        "doc_global_23",
+        "doc_global_24"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_22",
+        "doc_global_15",
+        "doc_global_24"
+      ],
+      "retrieved_titles": [
+        "The Evolution of Reranking Models in Information Retrieval: From Heuristic Methods to Large Language Models",
+        "A Method for Improving Retrieval Effectiveness in RAG",
+        "InfoGain-RAG: Boosting Retrieval-Augmented Generation via Document Information Gain-based Reranking and Filtering"
+      ],
+      "hits": 2,
+      "n_expected": 3,
+      "recall_at_k": 0.6667,
+      "hyde_query": "reranking models for information retrieval\nThe paper proposes a novel reranking model to improve the effectiveness of information retrieval systems by dynamically adjusting the relevance scores of retrieved documents in response to user feedback. Experimental results demonstrate significant performance gains compared to existing models, highlighting the potential for further advancements in the field.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 1187.93
+    },
+    {
+      "query_id": "q8",
+      "query_original": "cross-encoder for semantic search",
+      "expected_doc_ids": [
+        "doc_global_25",
+        "doc_global_26",
+        "doc_global_27"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_25",
+        "doc_global_14",
+        "doc_global_9"
+      ],
+      "retrieved_titles": [
+        "Hybrid Semantic Search for Biomedical Literature: Combining Sparse and Dense Retrieval with Cross-Encoder Reranking",
+        "Integrating Deep Learning Techniques in Information Retrieval: A Hybrid Approach to Relevance Optimization",
+        "A Hybrid Approach to Information Retrieval and Answer Generation for Regulatory Texts"
+      ],
+      "hits": 1,
+      "n_expected": 3,
+      "recall_at_k": 0.3333,
+      "hyde_query": "cross-encoder for semantic search\nThis study investigates the application of cross-encoder models in enhancing semantic search capabilities, aiming to improve the relevance and precision of search results in information retrieval systems. The paper proposes a novel approach using cross-encoder architectures to bridge the gap between textual representations and semantic understanding, demonstrating significant improvements in retrieval accuracy and user satisfaction compared to existing methods.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 1504.76
+    },
+    {
+      "query_id": "q9",
+      "query_original": "evaluation metrics for RAG systems",
+      "expected_doc_ids": [
+        "doc_global_28"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_28",
+        "doc_global_3",
+        "doc_global_2"
+      ],
+      "retrieved_titles": [
+        "UniEval-RAG: A Unified End-to-End Evaluation Framework for RAG Systems",
+        "RAGAs: Automated Evaluation of Retrieval Augmented Generation",
+        "Retrieval-Augmented Generation for Large Language Models: A Survey"
+      ],
+      "hits": 1,
+      "n_expected": 1,
+      "recall_at_k": 1.0,
+      "hyde_query": "evaluation metrics for RAG systems\nThis study evaluates various metrics for evaluating retrieval-Augmented Generation (RAG) systems, focusing on precision, recall, F1-score, and coverage metrics. The paper also examines the impact of different retrieval models, such as keyword-based, content-based, and hybrid approaches, on the performance of RAG systems. The findings suggest that the choice of evaluation metric and retrieval model significantly influences the accuracy and effectiveness of RAG systems, emphasizing the need for a comprehensive evaluation framework.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2037.26
+    },
+    {
+      "query_id": "q10",
+      "query_original": "knowledge graph enhanced retrieval",
+      "expected_doc_ids": [
+        "doc_global_29",
+        "doc_global_30",
+        "doc_global_31"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_29",
+        "doc_global_30",
+        "doc_global_15"
+      ],
+      "retrieved_titles": [
+        "Document GraphRAG: Knowledge Graph Enhanced Retrieval Augmented Generation for Document Question Answering Within the Manufacturing Domain",
+        "Knowledge Graph Enhanced Retrieval-Augmented Generation for Failure Mode and Effects Analysis",
+        "A Method for Improving Retrieval Effectiveness in RAG"
+      ],
+      "hits": 2,
+      "n_expected": 3,
+      "recall_at_k": 0.6667,
+      "hyde_query": "knowledge graph enhanced retrieval\nThis study introduces a novel method for enhancing knowledge graph retrieval through the integration of semantic knowledge and advanced natural language processing techniques. The proposed approach leverages the semantic similarity between entities and the context of language to improve the accuracy and relevance of query results. Experimental evaluations demonstrate significant improvements in retrieval performance compared to traditional methods, highlighting the potential of integrating knowledge graphs with advanced retrieval techniques to enhance information discovery in complex domains.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 1677.41
+    },
+    {
+      "query_id": "q11",
+      "query_original": "multi-vector retrieval models",
+      "expected_doc_ids": [
+        "doc_global_32",
+        "doc_global_33",
+        "doc_global_34"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_33",
+        "doc_global_32",
+        "doc_global_15"
+      ],
+      "retrieved_titles": [
+        "MUVERA: Multi-Vector Retrieval via Fixed Dimensional Encodings",
+        "IGP: Efficient Multi-Vector Retrieval via Proximity Graph Index",
+        "A Method for Improving Retrieval Effectiveness in RAG"
+      ],
+      "hits": 2,
+      "n_expected": 3,
+      "recall_at_k": 0.6667,
+      "hyde_query": "multi-vector retrieval models\nThe paper introduces a comprehensive framework for the multi-vector retrieval models, which addresses the limitations of existing techniques by incorporating multiple features into the retrieval process. It proposes a novel method for effectively combining and querying multiple vector representations to enhance the accuracy and relevance of search results. The study demonstrates the superior performance of the proposed models through rigorous experimental evaluations on diverse datasets, showcasing their capability in handling complex and highly-dimensional data efficiently.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 1698.01
+    },
+    {
+      "query_id": "q12",
+      "query_original": "sparse and dense embeddings fusion",
+      "expected_doc_ids": [
+        "doc_global_35"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_5",
+        "doc_global_4",
+        "doc_global_6"
+      ],
+      "retrieved_titles": [
+        "RocketQA: An Optimized Training Approach to Dense Passage Retrieval for Open-Domain Question Answering",
+        "Dense Passage Retrieval for Open-Domain Question Answering",
+        "RocketQAv2: A Joint Training Method for Dense Passage Retrieval and Passage Re-ranking"
+      ],
+      "hits": 0,
+      "n_expected": 1,
+      "recall_at_k": 0.0,
+      "hyde_query": "sparse and dense embeddings fusion\nIn this paper, we propose a novel method for integrating sparse and dense embeddings to enhance the performance of deep learning models on complex and high-dimensional datasets. We demonstrate that combining the strengths of both sparse and dense representations can lead to improved classification accuracy and generalization capabilities, especially in scenarios where limited labeled data is available. Our approach, termed Sparse-Dense Embeddings Fusion (SDEF), leverages the strengths of sparse models for their ability to efficiently process large datasets and the dense models for their capacity to capture complex relationships in the data. Through extensive empirical evaluations on various benchmark datasets, we show that our method significantly outperforms state-of-the-art techniques, particularly in scenarios where traditional methods struggle due to limited labeled data availability.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2910.36
+    },
+    {
+      "query_id": "q13",
+      "query_original": "document parsing techniques for rag",
+      "expected_doc_ids": [
+        "doc_global_36",
+        "doc_global_37",
+        "doc_global_38"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_58",
+        "doc_global_36",
+        "doc_global_37"
+      ],
+      "retrieved_titles": [
+        "Automatic question generation using extended dependency parsing",
+        "Document Parsing Unveiled: Techniques, Challenges, and Prospects for Structured Information Extraction",
+        "Empowering Business Decisions and Knowledge Management Through Advanced RAG-Driven QA Systems"
+      ],
+      "hits": 2,
+      "n_expected": 3,
+      "recall_at_k": 0.6667,
+      "hyde_query": "document parsing techniques for rag\nA novel evaluation framework for document parsing techniques addressing the challenges in reading comprehension and retrieval through advanced machine learning algorithms is proposed. This study introduces the use of Recurrent Neural Networks (RNNs) with attention mechanisms, focusing on their effectiveness in parsing and understanding structured documents. The results demonstrate significant improvements in accuracy and efficiency compared to traditional parsing methods, particularly in handling natural language processing tasks involving structured document analysis.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 1730.17
+    },
+    {
+      "query_id": "q14",
+      "query_original": "semantic caching in language models",
+      "expected_doc_ids": [
+        "doc_global_39",
+        "doc_global_40",
+        "doc_global_41"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_41",
+        "doc_global_39",
+        "doc_global_244"
+      ],
+      "retrieved_titles": [
+        "SCALM: Towards Semantic Caching for Automated Chat Services with Large Language Models",
+        "Semantic Caching of Contextual Summaries for Efficient Question-Answering with Language Models",
+        "Enhancing Financial Sentiment Analysis: A Deep Dive into Natural Language Processing for Market Prediction Industries"
+      ],
+      "hits": 2,
+      "n_expected": 3,
+      "recall_at_k": 0.6667,
+      "hyde_query": "semantic caching in language models\nAims to investigate the effectiveness of semantic caching in enhancing the performance of language models. This study explores the implementation of semantic caching as an optimization technique in language models, aiming to improve their ability to generate contextually relevant responses. Through a series of experiments, it evaluates the impact of semantic caching on the accuracy and efficiency of language models, providing theoretical insights into the mechanisms of semantic caching and its potential for future research.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2156.42
+    },
+    {
+      "query_id": "q15",
+      "query_original": "small language models efficiency",
+      "expected_doc_ids": [
+        "doc_global_42",
+        "doc_global_43",
+        "doc_global_44"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_42",
+        "doc_global_44",
+        "doc_global_75"
+      ],
+      "retrieved_titles": [
+        "MiniCPM: Unveiling the Potential of Small Language Models with Scalable Training Strategies",
+        "The Rise of Small Language Models",
+        "In-context Learning vs. Instruction Tuning: The Case of Small and Multilingual Language Models"
+      ],
+      "hits": 2,
+      "n_expected": 3,
+      "recall_at_k": 0.6667,
+      "hyde_query": "small language models efficiency\nThe efficacy and efficiency of small language models have been a subject of extensive debate in the academic community, with varying degrees of agreement regarding their performance across diverse applications. This paper investigates the theoretical underpinnings and empirical evidence that support the claims of these models' superior efficiency in certain contexts, while also highlighting the potential drawbacks and limitations that must be considered when evaluating their performance in real-world scenarios. Ultimately, the findings suggest that while small language models show promise in addressing some computational challenges, further research is needed to fully understand their capabilities and limitations.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2798.41
+    },
+    {
+      "query_id": "q16",
+      "query_original": "prompt engineering strategies",
+      "expected_doc_ids": [
+        "doc_global_45",
+        "doc_global_46",
+        "doc_global_47"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_45",
+        "doc_global_46",
+        "doc_global_49"
+      ],
+      "retrieved_titles": [
+        "AI literacy and its implications for prompt engineering strategies",
+        "Ethical implications of using general-purpose LLMs in clinical settings: a comparative analysis of prompt engineering strategies and their impact on patient safety",
+        "Large language models capsule: A research analysis of In-Context Learning (ICL) and Parameter-Efficient Fine-Tuning (PEFT) methods"
+      ],
+      "hits": 2,
+      "n_expected": 3,
+      "recall_at_k": 0.6667,
+      "hyde_query": "prompt engineering strategies\nPrompt engineering strategies: A comprehensive review of methodologies and best practices in enhancing language model performance. This paper explores the multifaceted approach of fine-tuning and hyperparameter optimization for language models, emphasizing the critical role of diverse evaluation metrics and the importance of domain-specific knowledge in achieving superior results. The study identifies key areas for improvement, including the integration of expert feedback and the development of tailored evaluation frameworks to enhance the interpretability and generalizability of the model. The findings highlight the necessity of continuous innovation in prompt engineering to address emerging challenges in natural language processing and beyond.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2909.9
+    },
+    {
+      "query_id": "q17",
+      "query_original": "parameter efficient fine tuning peft",
+      "expected_doc_ids": [
+        "doc_global_48",
+        "doc_global_49",
+        "doc_global_50"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_48",
+        "doc_global_49",
+        "doc_global_50"
+      ],
+      "retrieved_titles": [
+        "Lessons and Insights from a Unifying Study of Parameter-Efficient Fine-Tuning (PEFT) in Visual Recognition",
+        "Large language models capsule: A research analysis of In-Context Learning (ICL) and Parameter-Efficient Fine-Tuning (PEFT) methods",
+        "A SYSTEMATIC REVIEW OF PARAMETER-EFFICIENT FINE-TUNING (PEFT) IN SPEECH PROCESSING"
+      ],
+      "hits": 3,
+      "n_expected": 3,
+      "recall_at_k": 1.0,
+      "hyde_query": "parameter efficient fine tuning peft\nThe paper investigates the parameter-efficient fine-tuning method, PEFT, which reduces the computational cost significantly while maintaining high model performance. Through extensive experiments, it demonstrates that PEFT achieves comparable performance to state-of-the-art methods but with orders of magnitude fewer parameters, making it a significant advancement in the field of neural network fine-tuning.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 1861.66
+    },
+    {
+      "query_id": "q18",
+      "query_original": "quantization of large language models",
+      "expected_doc_ids": [
+        "doc_global_51",
+        "doc_global_52",
+        "doc_global_53"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_51",
+        "doc_global_53",
+        "doc_global_49"
+      ],
+      "retrieved_titles": [
+        "QuIP: 2-Bit Quantization of Large Language Models With Guarantees",
+        "AMQ: Enabling AutoML for Mixed-precision Weight-Only Quantization of Large Language Models",
+        "Large language models capsule: A research analysis of In-Context Learning (ICL) and Parameter-Efficient Fine-Tuning (PEFT) methods"
+      ],
+      "hits": 2,
+      "n_expected": 3,
+      "recall_at_k": 0.6667,
+      "hyde_query": "quantization of large language models\nThe paper investigates the quantization techniques employed to reduce the computational and memory requirements of large language models, focusing on the challenges and solutions in achieving quantization while maintaining the accuracy and performance of the models.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 1158.62
+    },
+    {
+      "query_id": "q19",
+      "query_original": "hallucination detection in llms",
+      "expected_doc_ids": [
+        "doc_global_54",
+        "doc_global_55",
+        "doc_global_56"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_56",
+        "doc_global_244",
+        "doc_global_138"
+      ],
+      "retrieved_titles": [
+        "ICR Probe: Tracking Hidden State Dynamics for Reliable Hallucination Detection in LLMs",
+        "Enhancing Financial Sentiment Analysis: A Deep Dive into Natural Language Processing for Market Prediction Industries",
+        "An Intelligent Framework for Automated Software Testing Using Artificial Intelligence Techniques"
+      ],
+      "hits": 1,
+      "n_expected": 3,
+      "recall_at_k": 0.3333,
+      "hyde_query": "hallucination detection in llms\nThe current research investigates the development of an advanced model for detecting hallucinations within large language models (LLMs), specifically focusing on the identification of unintended word associations and the manipulation of language content. The study utilizes a novel algorithm that leverages natural language processing techniques and machine learning models to analyze textual inputs, identifying instances where the LLM has produced unexpected or inaccurate outputs. The findings demonstrate the potential of this method in improving the transparency and reliability of LLMs, contributing to the ongoing effort to mitigate the risks associated with these powerful AI systems.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2844.86
+    },
+    {
+      "query_id": "q20",
+      "query_original": "question generation using neural networks",
+      "expected_doc_ids": [
+        "doc_global_57",
+        "doc_global_58"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_29",
+        "doc_global_37",
+        "doc_global_58"
+      ],
+      "retrieved_titles": [
+        "Document GraphRAG: Knowledge Graph Enhanced Retrieval Augmented Generation for Document Question Answering Within the Manufacturing Domain",
+        "Empowering Business Decisions and Knowledge Management Through Advanced RAG-Driven QA Systems",
+        "Automatic question generation using extended dependency parsing"
+      ],
+      "hits": 1,
+      "n_expected": 2,
+      "recall_at_k": 0.5,
+      "hyde_query": "question generation using neural networks\nA neural network-based approach for generating scientific questions has been developed, utilizing natural language processing techniques to identify key concepts and infer potential follow-up inquiries. This method aims to enhance the efficiency and relevance of question generation in scientific research, particularly in the context of open-ended inquiry. The study demonstrates significant improvements in question quality and relevance compared to traditional methods, highlighting the potential of artificial intelligence in advancing research methodologies.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2137.8
+    },
+    {
+      "query_id": "q21",
+      "query_original": "question answering evaluation benchmarks",
+      "expected_doc_ids": [
+        "doc_global_59",
+        "doc_global_60",
+        "doc_global_61"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_28",
+        "doc_global_59",
+        "doc_global_72"
+      ],
+      "retrieved_titles": [
+        "UniEval-RAG: A Unified End-to-End Evaluation Framework for RAG Systems",
+        "CounselBench: A Large-Scale Expert Evaluation and Adversarial Benchmarking of Large Language Models in Mental Health Question Answering",
+        "LeMAJ (Legal LLM-as-a-Judge): Bridging Legal Reasoning and LLM Evaluation"
+      ],
+      "hits": 1,
+      "n_expected": 3,
+      "recall_at_k": 0.3333,
+      "hyde_query": "question answering evaluation benchmarks\nIn this study, we present a comprehensive analysis of existing question answering evaluation benchmarks for natural language processing tasks. Our findings reveal significant discrepancies in metrics and data sources across benchmark sets, which hinders fair comparisons and hinders the development of accurate evaluation frameworks. By systematically evaluating 10 state-of-the-art benchmarks, we identify common issues such as inconsistent evaluation criteria, lack of diversity in training data, and varying complexity in task design. Our research underscores the need for standardization and collaboration in the development of question answering benchmarks, ultimately contributing to the improvement of evaluation methods and the advancement of NLP technologies.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 3019.91
+    },
+    {
+      "query_id": "q22",
+      "query_original": "synthetic dataset generation llm",
+      "expected_doc_ids": [
+        "doc_global_62",
+        "doc_global_63",
+        "doc_global_64"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_62",
+        "doc_global_64",
+        "doc_global_9"
+      ],
+      "retrieved_titles": [
+        "Large Language Models for Synthetic Dataset Generation of Cybersecurity Indicators of Compromise",
+        "What We Know About the Role of Large Language Models for Medical Synthetic Dataset Generation",
+        "A Hybrid Approach to Information Retrieval and Answer Generation for Regulatory Texts"
+      ],
+      "hits": 2,
+      "n_expected": 3,
+      "recall_at_k": 0.6667,
+      "hyde_query": "synthetic dataset generation llm\nIn this paper, we introduce a novel method for the generation of synthetic datasets tailored for machine learning applications, leveraging large language models to enhance data creation efficiency and quality. Through this approach, we aim to streamline the data preprocessing and augmentation processes, thereby accelerating the development of machine learning models in various domains. Our methodology, grounded in the principles of large language models, demonstrates significant improvements in dataset creation speed and quality, enabling researchers to focus on model development rather than data management. Future work will explore the integration of this method with existing data generation tools to further optimize performance and accessibility.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2872.85
+    },
+    {
+      "query_id": "q23",
+      "query_original": "llm reasoning and chain of thought",
+      "expected_doc_ids": [
+        "doc_global_65",
+        "doc_global_66",
+        "doc_global_67"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_66",
+        "doc_global_106",
+        "doc_global_44"
+      ],
+      "retrieved_titles": [
+        "Satori: Reinforcement Learning with Chain-of-Action-Thought Enhances LLM Reasoning via Autoregressive Search",
+        "Developing interpretable models and techniques for explainable AI in decision-making",
+        "The Rise of Small Language Models"
+      ],
+      "hits": 1,
+      "n_expected": 3,
+      "recall_at_k": 0.3333,
+      "hyde_query": "llm reasoning and chain of thought\nThe present study investigates the mechanisms underlying language generation systems such as large language models (LLMs) and their ability to exhibit reasoning and chain of thought. By examining the output of such models on various complex reasoning tasks, the research aims to understand how these models process and generate coherent responses, thereby contributing to the field of artificial intelligence and natural language processing. This investigation is expected to enhance our understanding of LLMs and their potential in various applications, including education and decision-making.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2633.4
+    },
+    {
+      "query_id": "q24",
+      "query_original": "context length extrapolation in transformers",
+      "expected_doc_ids": [
+        "doc_global_68",
+        "doc_global_69",
+        "doc_global_70"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_68",
+        "doc_global_70",
+        "doc_global_167"
+      ],
+      "retrieved_titles": [
+        "Context-aware Biases for Length Extrapolation",
+        "Megalodon: Efficient LLM Pretraining and Inference with Unlimited Context Length",
+        "Improving Conversational AI using Transformer and Reinforcement Learning from Human Feedback (RLHF)"
+      ],
+      "hits": 2,
+      "n_expected": 3,
+      "recall_at_k": 0.6667,
+      "hyde_query": "context length extrapolation in transformers\nIn this paper, we explore the phenomenon of context length extrapolation in transformer models, examining how these models are able to predict and extrapolate beyond the length of the input sequence. We investigate the underlying mechanisms responsible for this ability, uncovering connections between attention mechanisms, positional encoding, and the design of transformer architecture, ultimately contributing to a deeper understanding of these models' capabilities and limitations in natural language processing tasks.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2151.22
+    },
+    {
+      "query_id": "q25",
+      "query_original": "llm as a judge evaluation methodology",
+      "expected_doc_ids": [
+        "doc_global_71",
+        "doc_global_72",
+        "doc_global_73"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_28",
+        "doc_global_72",
+        "doc_global_73"
+      ],
+      "retrieved_titles": [
+        "UniEval-RAG: A Unified End-to-End Evaluation Framework for RAG Systems",
+        "LeMAJ (Legal LLM-as-a-Judge): Bridging Legal Reasoning and LLM Evaluation",
+        "Transformers-as-a-Jury: Mimicking LLM-as-a-Judge Text Evaluation on Edge Devices"
+      ],
+      "hits": 2,
+      "n_expected": 3,
+      "recall_at_k": 0.6667,
+      "hyde_query": "llm as a judge evaluation methodology\nThe current study investigates the application of large language models (LLMs) as a methodology for evaluating judges' performance, utilizing a well-defined dataset and employing a structured evaluation framework. The results demonstrate that LLMs can effectively analyze judges' decisions, identify patterns in decision-making, and provide insights into the judges' reasoning processes, offering a novel and potentially valuable tool for the field of judicial evaluation.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2070.86
+    },
+    {
+      "query_id": "q26",
+      "query_original": "instruction tuning small language models",
+      "expected_doc_ids": [
+        "doc_global_74",
+        "doc_global_75",
+        "doc_global_76"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_75",
+        "doc_global_66",
+        "doc_global_1"
+      ],
+      "retrieved_titles": [
+        "In-context Learning vs. Instruction Tuning: The Case of Small and Multilingual Language Models",
+        "Satori: Reinforcement Learning with Chain-of-Action-Thought Enhances LLM Reasoning via Autoregressive Search",
+        "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+      ],
+      "hits": 1,
+      "n_expected": 3,
+      "recall_at_k": 0.3333,
+      "hyde_query": "instruction tuning small language models\nThis study explores the effectiveness of fine-tuning pre-trained language models on diverse instruction tasks. The research demonstrates that minimal additional training data can significantly enhance the performance of these models, particularly in complex instruction-following scenarios. The findings suggest that the integration of domain-specific knowledge is crucial for achieving superior results, highlighting the potential of these models for personalized instruction delivery.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 1884.02
+    },
+    {
+      "query_id": "q27",
+      "query_original": "agentic workflows and multi-agent systems",
+      "expected_doc_ids": [
+        "doc_global_77",
+        "doc_global_78",
+        "doc_global_79"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_79",
+        "doc_global_351",
+        "doc_global_353"
+      ],
+      "retrieved_titles": [
+        "Evolution of AI in Education: Agentic Workflows",
+        "Intelligent Automation for Streamlining Prior Authorization Workflows Integrated with EHRs Using Agentic AI",
+        "Agentic AI-Powered Automation: A New Paradigm for Healthcare Workflow Optimization"
+      ],
+      "hits": 1,
+      "n_expected": 3,
+      "recall_at_k": 0.3333,
+      "hyde_query": "agentic workflows and multi-agent systems\nThe study investigates the integration of agentic workflows and multi-agent systems to enhance decision-making processes in complex environments. The research proposes a novel framework that leverages the strengths of both paradigms, enabling distributed decision-making with minimal coordination. Through extensive simulations and real-world applications, the findings demonstrate significant improvements in task completion times and system reliability. The paper concludes with a discussion on the potential for future research to further refine the methodology and explore practical implementation strategies.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2419.27
+    },
+    {
+      "query_id": "q28",
+      "query_original": "multilingual large language models",
+      "expected_doc_ids": [
+        "doc_global_80",
+        "doc_global_81",
+        "doc_global_82"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_81",
+        "doc_global_82",
+        "doc_global_80"
+      ],
+      "retrieved_titles": [
+        "A survey on multilingual large language models: corpora, alignment, and bias",
+        "Babel: Open Multilingual Large Language Models Serving Over 90% of Global Speakers",
+        "A survey of multilingual large language models"
+      ],
+      "hits": 3,
+      "n_expected": 3,
+      "recall_at_k": 1.0,
+      "hyde_query": "multilingual large language models\nIn this study, we explore the capabilities and limitations of multilingual large language models (LLMs) in the context of global communication and cultural exchange. Our research demonstrates how these models can effectively translate and understand diverse linguistic and cultural inputs, yet highlights the need for continued refinement in their ability to accurately represent nuanced cultural differences and handle complex multilingual interactions. The findings underscore the importance of continued research into the development of more culturally sensitive and linguistically advanced LLMs to enhance global understanding and collaboration.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2688.01
+    },
+    {
+      "query_id": "q29",
+      "query_original": "prompt injection vulnerability detection",
+      "expected_doc_ids": [
+        "doc_global_83",
+        "doc_global_84"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_260",
+        "doc_global_259",
+        "doc_global_188"
+      ],
+      "retrieved_titles": [
+        "Cybersecurity Solutions for Industrial Internet of Things-Edge Computing Integration: Challenges, Threats, and Future Directions",
+        "Cybersecurity Solutions for Industrial Internet of Things–Edge Computing Integration: Challenges, Threats, and Future Directions",
+        "Enhancing LLM-Based Feedback: Insights from Intelligent Tutoring Systems and the Learning Sciences"
+      ],
+      "hits": 0,
+      "n_expected": 2,
+      "recall_at_k": 0.0,
+      "hyde_query": "prompt injection vulnerability detection\nThe paper presents a comprehensive approach for the detection of prompt injection vulnerabilities in machine learning models, focusing on the misuse of inputs to manipulate the output of AI systems. The methodology involves the analysis of training datasets, identification of specific patterns indicative of prompt injection, and the development of a robust algorithm capable of accurately detecting such vulnerabilities across diverse applications. The findings contribute to the field of cybersecurity by providing actionable insights for mitigating potential security risks associated with AI systems, thereby enhancing the overall robustness and safety of these technologies.",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 2613.42
+    }
+  ]
+}

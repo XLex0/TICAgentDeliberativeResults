@@ -1,0 +1,848 @@
+{
+  "meta": {
+    "run_id": "20260916T185850Z",
+    "design": "compare HyDE+BM25 vs TF-IDF on same synthetic corpus",
+    "dataset": "/home/xelan/Documentos/Github/Tesis/CentinelaV3/search-service/dataset_qg_qa_sintetico.json",
+    "top_k": 3,
+    "ollama_model": "qwen2.5:1.5b",
+    "ollama_host": "http://127.0.0.1:11434",
+    "n_queries": 30,
+    "print_summary": true
+  },
+  "results": [
+    {
+      "query_id": "q0",
+      "query_original": "retrieval augmented generation",
+      "expected_doc_ids": [
+        "doc_global_1",
+        "doc_global_2",
+        "doc_global_3"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_30",
+        "doc_global_21",
+        "doc_global_29"
+      ],
+      "hyde_hits": 0,
+      "hyde_recall": 0.0,
+      "hyde_latency_ms": 3070.77,
+      "tfidf_retrieved": [
+        "doc_global_3",
+        "doc_global_38",
+        "doc_global_8"
+      ],
+      "tfidf_hits": 1,
+      "tfidf_recall": 0.3333,
+      "tfidf_latency_ms": 3.86,
+      "delta_recall": -0.3333,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q1",
+      "query_original": "dense passage retrieval",
+      "expected_doc_ids": [
+        "doc_global_4",
+        "doc_global_5",
+        "doc_global_6"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_6",
+        "doc_global_5",
+        "doc_global_4"
+      ],
+      "hyde_hits": 3,
+      "hyde_recall": 1.0,
+      "hyde_latency_ms": 1492.52,
+      "tfidf_retrieved": [
+        "doc_global_6",
+        "doc_global_4",
+        "doc_global_5"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 1.85,
+      "delta_recall": 0.0,
+      "winner": "tie"
+    },
+    {
+      "query_id": "q2",
+      "query_original": "hybrid search in information retrieval",
+      "expected_doc_ids": [
+        "doc_global_7",
+        "doc_global_8",
+        "doc_global_9"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_15",
+        "doc_global_9",
+        "doc_global_14"
+      ],
+      "hyde_hits": 1,
+      "hyde_recall": 0.3333,
+      "hyde_latency_ms": 2135.03,
+      "tfidf_retrieved": [
+        "doc_global_7",
+        "doc_global_8",
+        "doc_global_9"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 3.38,
+      "delta_recall": -0.6667,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q3",
+      "query_original": "vector database indexing algorithms",
+      "expected_doc_ids": [
+        "doc_global_10",
+        "doc_global_11",
+        "doc_global_12"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_10",
+        "doc_global_11",
+        "doc_global_12"
+      ],
+      "hyde_hits": 3,
+      "hyde_recall": 1.0,
+      "hyde_latency_ms": 2351.32,
+      "tfidf_retrieved": [
+        "doc_global_10",
+        "doc_global_11",
+        "doc_global_12"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 2.14,
+      "delta_recall": 0.0,
+      "winner": "tie"
+    },
+    {
+      "query_id": "q4",
+      "query_original": "bm25 text retrieval optimization",
+      "expected_doc_ids": [
+        "doc_global_13",
+        "doc_global_14",
+        "doc_global_15"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_15",
+        "doc_global_9",
+        "doc_global_14"
+      ],
+      "hyde_hits": 2,
+      "hyde_recall": 0.6667,
+      "hyde_latency_ms": 1799.06,
+      "tfidf_retrieved": [
+        "doc_global_13",
+        "doc_global_15",
+        "doc_global_179"
+      ],
+      "tfidf_hits": 2,
+      "tfidf_recall": 0.6667,
+      "tfidf_latency_ms": 3.57,
+      "delta_recall": 0.0,
+      "winner": "tie"
+    },
+    {
+      "query_id": "q5",
+      "query_original": "query expansion techniques in search engines",
+      "expected_doc_ids": [
+        "doc_global_16",
+        "doc_global_17",
+        "doc_global_18"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_16",
+        "doc_global_18",
+        "doc_global_10"
+      ],
+      "hyde_hits": 2,
+      "hyde_recall": 0.6667,
+      "hyde_latency_ms": 1102.8,
+      "tfidf_retrieved": [
+        "doc_global_16",
+        "doc_global_18",
+        "doc_global_17"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 3.5,
+      "delta_recall": -0.3333,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q6",
+      "query_original": "hypothetical document embeddings hyde",
+      "expected_doc_ids": [
+        "doc_global_19",
+        "doc_global_20",
+        "doc_global_21"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_19",
+        "doc_global_21",
+        "doc_global_208"
+      ],
+      "hyde_hits": 2,
+      "hyde_recall": 0.6667,
+      "hyde_latency_ms": 1811.94,
+      "tfidf_retrieved": [
+        "doc_global_20",
+        "doc_global_19",
+        "doc_global_21"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 1.98,
+      "delta_recall": -0.3333,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q7",
+      "query_original": "reranking models for information retrieval",
+      "expected_doc_ids": [
+        "doc_global_22",
+        "doc_global_23",
+        "doc_global_24"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_15",
+        "doc_global_22",
+        "doc_global_16"
+      ],
+      "hyde_hits": 1,
+      "hyde_recall": 0.3333,
+      "hyde_latency_ms": 2231.37,
+      "tfidf_retrieved": [
+        "doc_global_22",
+        "doc_global_20",
+        "doc_global_9"
+      ],
+      "tfidf_hits": 1,
+      "tfidf_recall": 0.3333,
+      "tfidf_latency_ms": 3.43,
+      "delta_recall": 0.0,
+      "winner": "tie"
+    },
+    {
+      "query_id": "q8",
+      "query_original": "cross-encoder for semantic search",
+      "expected_doc_ids": [
+        "doc_global_25",
+        "doc_global_26",
+        "doc_global_27"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_27",
+        "doc_global_15",
+        "doc_global_18"
+      ],
+      "hyde_hits": 1,
+      "hyde_recall": 0.3333,
+      "hyde_latency_ms": 2087.05,
+      "tfidf_retrieved": [
+        "doc_global_27",
+        "doc_global_25",
+        "doc_global_17"
+      ],
+      "tfidf_hits": 2,
+      "tfidf_recall": 0.6667,
+      "tfidf_latency_ms": 3.38,
+      "delta_recall": -0.3333,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q9",
+      "query_original": "evaluation metrics for RAG systems",
+      "expected_doc_ids": [
+        "doc_global_28"
+      ],
+      "n_expected": 1,
+      "hyde_retrieved": [
+        "doc_global_28",
+        "doc_global_3",
+        "doc_global_24"
+      ],
+      "hyde_hits": 1,
+      "hyde_recall": 1.0,
+      "hyde_latency_ms": 2973.22,
+      "tfidf_retrieved": [
+        "doc_global_28",
+        "doc_global_38",
+        "doc_global_3"
+      ],
+      "tfidf_hits": 1,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 3.38,
+      "delta_recall": 0.0,
+      "winner": "tie"
+    },
+    {
+      "query_id": "q10",
+      "query_original": "knowledge graph enhanced retrieval",
+      "expected_doc_ids": [
+        "doc_global_29",
+        "doc_global_30",
+        "doc_global_31"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_30",
+        "doc_global_29",
+        "doc_global_16"
+      ],
+      "hyde_hits": 2,
+      "hyde_recall": 0.6667,
+      "hyde_latency_ms": 2478.29,
+      "tfidf_retrieved": [
+        "doc_global_31",
+        "doc_global_30",
+        "doc_global_29"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 1.81,
+      "delta_recall": -0.3333,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q11",
+      "query_original": "multi-vector retrieval models",
+      "expected_doc_ids": [
+        "doc_global_32",
+        "doc_global_33",
+        "doc_global_34"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_33",
+        "doc_global_34",
+        "doc_global_32"
+      ],
+      "hyde_hits": 3,
+      "hyde_recall": 1.0,
+      "hyde_latency_ms": 1661.48,
+      "tfidf_retrieved": [
+        "doc_global_33",
+        "doc_global_34",
+        "doc_global_32"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 1.83,
+      "delta_recall": 0.0,
+      "winner": "tie"
+    },
+    {
+      "query_id": "q12",
+      "query_original": "sparse and dense embeddings fusion",
+      "expected_doc_ids": [
+        "doc_global_35"
+      ],
+      "n_expected": 1,
+      "hyde_retrieved": [
+        "doc_global_15",
+        "doc_global_4",
+        "doc_global_6"
+      ],
+      "hyde_hits": 0,
+      "hyde_recall": 0.0,
+      "hyde_latency_ms": 2770.22,
+      "tfidf_retrieved": [
+        "doc_global_35",
+        "doc_global_25",
+        "doc_global_4"
+      ],
+      "tfidf_hits": 1,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 3.64,
+      "delta_recall": -1.0,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q13",
+      "query_original": "document parsing techniques for rag",
+      "expected_doc_ids": [
+        "doc_global_36",
+        "doc_global_37",
+        "doc_global_38"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_58",
+        "doc_global_37",
+        "doc_global_36"
+      ],
+      "hyde_hits": 2,
+      "hyde_recall": 0.6667,
+      "hyde_latency_ms": 2913.98,
+      "tfidf_retrieved": [
+        "doc_global_36",
+        "doc_global_38",
+        "doc_global_37"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 1.86,
+      "delta_recall": -0.3333,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q14",
+      "query_original": "semantic caching in language models",
+      "expected_doc_ids": [
+        "doc_global_39",
+        "doc_global_40",
+        "doc_global_41"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_41",
+        "doc_global_30",
+        "doc_global_54"
+      ],
+      "hyde_hits": 1,
+      "hyde_recall": 0.3333,
+      "hyde_latency_ms": 2864.52,
+      "tfidf_retrieved": [
+        "doc_global_40",
+        "doc_global_39",
+        "doc_global_41"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 2.71,
+      "delta_recall": -0.6667,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q15",
+      "query_original": "small language models efficiency",
+      "expected_doc_ids": [
+        "doc_global_42",
+        "doc_global_43",
+        "doc_global_44"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_42",
+        "doc_global_44",
+        "doc_global_177"
+      ],
+      "hyde_hits": 2,
+      "hyde_recall": 0.6667,
+      "hyde_latency_ms": 2589.49,
+      "tfidf_retrieved": [
+        "doc_global_44",
+        "doc_global_76",
+        "doc_global_43"
+      ],
+      "tfidf_hits": 2,
+      "tfidf_recall": 0.6667,
+      "tfidf_latency_ms": 1.98,
+      "delta_recall": 0.0,
+      "winner": "tie"
+    },
+    {
+      "query_id": "q16",
+      "query_original": "prompt engineering strategies",
+      "expected_doc_ids": [
+        "doc_global_45",
+        "doc_global_46",
+        "doc_global_47"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_45",
+        "doc_global_46",
+        "doc_global_105"
+      ],
+      "hyde_hits": 2,
+      "hyde_recall": 0.6667,
+      "hyde_latency_ms": 2989.42,
+      "tfidf_retrieved": [
+        "doc_global_47",
+        "doc_global_45",
+        "doc_global_46"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 1.91,
+      "delta_recall": -0.3333,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q17",
+      "query_original": "parameter efficient fine tuning peft",
+      "expected_doc_ids": [
+        "doc_global_48",
+        "doc_global_49",
+        "doc_global_50"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_49",
+        "doc_global_48",
+        "doc_global_50"
+      ],
+      "hyde_hits": 3,
+      "hyde_recall": 1.0,
+      "hyde_latency_ms": 1615.71,
+      "tfidf_retrieved": [
+        "doc_global_50",
+        "doc_global_49",
+        "doc_global_48"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 2.44,
+      "delta_recall": 0.0,
+      "winner": "tie"
+    },
+    {
+      "query_id": "q18",
+      "query_original": "quantization of large language models",
+      "expected_doc_ids": [
+        "doc_global_51",
+        "doc_global_52",
+        "doc_global_53"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_51",
+        "doc_global_53",
+        "doc_global_189"
+      ],
+      "hyde_hits": 2,
+      "hyde_recall": 0.6667,
+      "hyde_latency_ms": 2505.33,
+      "tfidf_retrieved": [
+        "doc_global_52",
+        "doc_global_51",
+        "doc_global_40"
+      ],
+      "tfidf_hits": 2,
+      "tfidf_recall": 0.6667,
+      "tfidf_latency_ms": 1.87,
+      "delta_recall": 0.0,
+      "winner": "tie"
+    },
+    {
+      "query_id": "q19",
+      "query_original": "hallucination detection in llms",
+      "expected_doc_ids": [
+        "doc_global_54",
+        "doc_global_55",
+        "doc_global_56"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_55",
+        "doc_global_54",
+        "doc_global_56"
+      ],
+      "hyde_hits": 3,
+      "hyde_recall": 1.0,
+      "hyde_latency_ms": 2902.88,
+      "tfidf_retrieved": [
+        "doc_global_55",
+        "doc_global_56",
+        "doc_global_54"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 3.96,
+      "delta_recall": 0.0,
+      "winner": "tie"
+    },
+    {
+      "query_id": "q20",
+      "query_original": "question generation using neural networks",
+      "expected_doc_ids": [
+        "doc_global_57",
+        "doc_global_58"
+      ],
+      "n_expected": 2,
+      "hyde_retrieved": [
+        "doc_global_58",
+        "doc_global_198",
+        "doc_global_94"
+      ],
+      "hyde_hits": 1,
+      "hyde_recall": 0.5,
+      "hyde_latency_ms": 1919.89,
+      "tfidf_retrieved": [
+        "doc_global_57",
+        "doc_global_58",
+        "doc_global_239"
+      ],
+      "tfidf_hits": 2,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 1.95,
+      "delta_recall": -0.5,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q21",
+      "query_original": "question answering evaluation benchmarks",
+      "expected_doc_ids": [
+        "doc_global_59",
+        "doc_global_60",
+        "doc_global_61"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_28",
+        "doc_global_4",
+        "doc_global_59"
+      ],
+      "hyde_hits": 1,
+      "hyde_recall": 0.3333,
+      "hyde_latency_ms": 1727.09,
+      "tfidf_retrieved": [
+        "doc_global_61",
+        "doc_global_4",
+        "doc_global_39"
+      ],
+      "tfidf_hits": 1,
+      "tfidf_recall": 0.3333,
+      "tfidf_latency_ms": 3.03,
+      "delta_recall": 0.0,
+      "winner": "tie"
+    },
+    {
+      "query_id": "q22",
+      "query_original": "synthetic dataset generation llm",
+      "expected_doc_ids": [
+        "doc_global_62",
+        "doc_global_63",
+        "doc_global_64"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_62",
+        "doc_global_64",
+        "doc_global_159"
+      ],
+      "hyde_hits": 2,
+      "hyde_recall": 0.6667,
+      "hyde_latency_ms": 3428.74,
+      "tfidf_retrieved": [
+        "doc_global_63",
+        "doc_global_62",
+        "doc_global_64"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 3.52,
+      "delta_recall": -0.3333,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q23",
+      "query_original": "llm reasoning and chain of thought",
+      "expected_doc_ids": [
+        "doc_global_65",
+        "doc_global_66",
+        "doc_global_67"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_23",
+        "doc_global_413",
+        "doc_global_135"
+      ],
+      "hyde_hits": 0,
+      "hyde_recall": 0.0,
+      "hyde_latency_ms": 1052.73,
+      "tfidf_retrieved": [
+        "doc_global_67",
+        "doc_global_66",
+        "doc_global_65"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 3.89,
+      "delta_recall": -1.0,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q24",
+      "query_original": "context length extrapolation in transformers",
+      "expected_doc_ids": [
+        "doc_global_68",
+        "doc_global_69",
+        "doc_global_70"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_68",
+        "doc_global_70",
+        "doc_global_49"
+      ],
+      "hyde_hits": 2,
+      "hyde_recall": 0.6667,
+      "hyde_latency_ms": 2306.01,
+      "tfidf_retrieved": [
+        "doc_global_69",
+        "doc_global_68",
+        "doc_global_70"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 2.03,
+      "delta_recall": -0.3333,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q25",
+      "query_original": "llm as a judge evaluation methodology",
+      "expected_doc_ids": [
+        "doc_global_71",
+        "doc_global_72",
+        "doc_global_73"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_72",
+        "doc_global_71",
+        "doc_global_73"
+      ],
+      "hyde_hits": 3,
+      "hyde_recall": 1.0,
+      "hyde_latency_ms": 1990.24,
+      "tfidf_retrieved": [
+        "doc_global_73",
+        "doc_global_72",
+        "doc_global_67"
+      ],
+      "tfidf_hits": 2,
+      "tfidf_recall": 0.6667,
+      "tfidf_latency_ms": 2.04,
+      "delta_recall": 0.3333,
+      "winner": "hyde_bm25"
+    },
+    {
+      "query_id": "q26",
+      "query_original": "instruction tuning small language models",
+      "expected_doc_ids": [
+        "doc_global_74",
+        "doc_global_75",
+        "doc_global_76"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_75",
+        "doc_global_1",
+        "doc_global_44"
+      ],
+      "hyde_hits": 1,
+      "hyde_recall": 0.3333,
+      "hyde_latency_ms": 1227.6,
+      "tfidf_retrieved": [
+        "doc_global_75",
+        "doc_global_74",
+        "doc_global_76"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 2.71,
+      "delta_recall": -0.6667,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q27",
+      "query_original": "agentic workflows and multi-agent systems",
+      "expected_doc_ids": [
+        "doc_global_77",
+        "doc_global_78",
+        "doc_global_79"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_79",
+        "doc_global_353",
+        "doc_global_78"
+      ],
+      "hyde_hits": 2,
+      "hyde_recall": 0.6667,
+      "hyde_latency_ms": 1642.92,
+      "tfidf_retrieved": [
+        "doc_global_79",
+        "doc_global_77",
+        "doc_global_78"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 1.89,
+      "delta_recall": -0.3333,
+      "winner": "tfidf"
+    },
+    {
+      "query_id": "q28",
+      "query_original": "multilingual large language models",
+      "expected_doc_ids": [
+        "doc_global_80",
+        "doc_global_81",
+        "doc_global_82"
+      ],
+      "n_expected": 3,
+      "hyde_retrieved": [
+        "doc_global_81",
+        "doc_global_80",
+        "doc_global_82"
+      ],
+      "hyde_hits": 3,
+      "hyde_recall": 1.0,
+      "hyde_latency_ms": 1185.2,
+      "tfidf_retrieved": [
+        "doc_global_80",
+        "doc_global_81",
+        "doc_global_82"
+      ],
+      "tfidf_hits": 3,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 2.09,
+      "delta_recall": 0.0,
+      "winner": "tie"
+    },
+    {
+      "query_id": "q29",
+      "query_original": "prompt injection vulnerability detection",
+      "expected_doc_ids": [
+        "doc_global_83",
+        "doc_global_84"
+      ],
+      "n_expected": 2,
+      "hyde_retrieved": [
+        "doc_global_83",
+        "doc_global_84",
+        "doc_global_407"
+      ],
+      "hyde_hits": 2,
+      "hyde_recall": 1.0,
+      "hyde_latency_ms": 2522.96,
+      "tfidf_retrieved": [
+        "doc_global_84",
+        "doc_global_83",
+        "doc_global_47"
+      ],
+      "tfidf_hits": 2,
+      "tfidf_recall": 1.0,
+      "tfidf_latency_ms": 2.51,
+      "delta_recall": 0.0,
+      "winner": "tie"
+    }
+  ]
+}

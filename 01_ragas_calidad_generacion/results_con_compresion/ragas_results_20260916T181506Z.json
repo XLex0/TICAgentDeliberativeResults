@@ -1,0 +1,1555 @@
+{
+  "meta": {
+    "run_id": "20260916T181506Z",
+    "design": "segmented: retrieve(query_original) -> QAGenerationPipeline -> RAGAS(F,AR)",
+    "dataset": "/home/xelan/Documentos/Github/Tesis/CentinelaV3/search-service/dataset_qg_qa_sintetico.json",
+    "top_k": 3,
+    "gemini_model": "gemini-3.6-flash",
+    "embed_model": "gemini-embedding-001",
+    "ollama_model": "qwen2.5:1.5b",
+    "ollama_host": "http://127.0.0.1:11434",
+    "use_compression": true,
+    "use_iterative": true,
+    "n_queries": 8,
+    "n_results": 24,
+    "print_summary": true
+  },
+  "results": [
+    {
+      "query_id": "q0",
+      "query_original": "retrieval augmented generation",
+      "pair_index": 0,
+      "question": "Pués, ¿qué es el método de optimización colaborativa que se presenta en el artículo \"A Method for Improving Retrieval Effectiveness in RAG\"?",
+      "answer": "El método de optimización colaborativa se presenta en el artículo \"A Method for Improving Retrieval Effectiveness in RAG\" como un enfoque de optimización global mediante el grid search para ajustar las ponderaciones de la recuperación de texto. Este método permite un equilibrio entre la recuperación basada en términos y la recuperación semántica, lo que mejora la eficiencia y precisión de la recuperación de texto en el contexto de la generación a través de recuperación (RAG).",
+      "contexts": [
+        "A Method for Improving Retrieval Effectiveness in RAG. El artículo presenta un método de optimización colaborativa que combina técnicas de recuperación de texto, búsqueda de parámetros y recuperación recursiva para mejorar la eficiencia y precisión de la recuperación de texto en el contexto de la generación a través de recuperación (RAG). El método utiliza un enfoque de optimización global mediante el grid search para ajustar las ponderaciones de la recuperación de texto, lo que permite un equilibrio entre la recuperación basada en términos y la recuperación semántica. Además, se introduce una estrategia de recuperación recursiva para mejorar la cobertura de conocimientos secundarios y documentos estructurados complejos a través de análisis gránulos y recuperación progresiva. Los resultados experimentales muestran que la recuperación de texto combinada (hybrid retrieval) supera significativamente la recuperación única basada en recuperación densa (single dense retrieval",
+        "UniEval-RAG: A Unified End-to-End Evaluation Framework for RAG Systems. Resumen estructurado:\n\n1. **Introducción**: El trabajo presenta un nuevo enfoque para evaluar la recuperación y generación en modelos de lenguaje grandes (LLMs).\n2. **Objetivo**: Proporcionar una evaluación unificada del pipeline RAG que cubra todos los pasos del proceso.\n3. **Método**: Introdujo un sistema de evaluación llamado UniEval-RAG que evalúa tanto la recuperación como la generación, incorporando métricas adicionales como densidad de palabras clave y cobertura de palabras clave para evaluar la coherencia estructural y la completitud semántica de la cuchara.\n4. **Evaluación**: Los resultados muestran que UniEval-RAG identifica las barreras de rendimiento y ofrece insights interpretables para guiar la optimización de los sistemas RAG.\n5. **Aplicación**: Se utiliza para evaluar",
+        "A Hybrid Approach to Information Retrieval and Answer Generation for Regulatory Texts. Resumen estructurado:\n\n- **Título del sistema**: Hybrid Information Retrieval System (HIRS) \n- **Método**: Combina técnicas de búsqueda léxica y semántica para extraer información relevante de corpora reguladoras.\n- **Algoritmo**: Integración de un modelo de transformación de oraciones (sentence transformer) con el algoritmo BM25 tradicional para mejorar la precisión semántica y la cobertura léxica.\n- **Método de generación**: Utiliza modelos de Lenguaje Grande (LLMs) dentro de un marco de generación a través de recuperación (RAG) para generar respuestas precisas y completas.\n- **Resultados**: Demostró un rendimiento significativamente superior a los métodos estándar de búsqueda léxica y semántica, con mejoras notables en la recall@10 y la MAP@10.\n-"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_15",
+        "doc_global_28",
+        "doc_global_9"
+      ],
+      "expected_doc_ids": [
+        "doc_global_1",
+        "doc_global_2",
+        "doc_global_3"
+      ],
+      "recall_at_k": 0.0,
+      "faithfulness": 0.7143,
+      "answer_relevancy": 0.8605,
+      "faithfulness_detail": {
+        "score": 0.7143,
+        "statements": [
+          "El método de optimización colaborativa se presenta en el artículo \"A Method for Improving Retrieval Effectiveness in RAG\".",
+          "El método de optimización colaborativa es un enfoque de optimización global.",
+          "El método utiliza grid search para ajustar las ponderaciones de la recuperación de texto.",
+          "El método permite un equilibrio entre la recuperación basada en términos y la recuperación semántica.",
+          "El método mejora la eficiencia de la recuperación de texto en el contexto de RAG.",
+          "El método mejora la precisión de la recuperación de texto en el contexto de RAG.",
+          "Las siglas RAG corresponden a la generación a través de recuperación."
+        ],
+        "verified": [
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true
+        ],
+        "n_statements": 7,
+        "n_verified": 5
+      },
+      "answer_relevancy_detail": {
+        "score": 0.8605,
+        "generated_questions": [
+          "¿En qué consiste el método de optimización colaborativa presentado en el artículo 'A Method for Improving Retrieval Effectiveness in RAG'?",
+          "¿Cómo ayuda el método de optimización colaborativa a mejorar la eficiencia y precisión en la recuperación de texto para RAG?",
+          "¿De qué manera se logra un equilibrio entre la recuperación basada en términos y la recuperación semántica según el texto?"
+        ],
+        "similarities": [
+          0.9956,
+          0.9294,
+          0.6567
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 36304.89
+    },
+    {
+      "query_id": "q0",
+      "query_original": "retrieval augmented generation",
+      "pair_index": 1,
+      "question": "¿Qué estrategia de recuperación recursiva se introduce en el artículo \"A Method for Improving Retrieval Effectiveness in RAG\"?",
+      "answer": "En el artículo \"A Method for Improving Retrieval Effectiveness in RAG\", se introduce una estrategia de recuperación recursiva para mejorar la cobertura de conocimientos secundarios y documentos estructurados complejos a través de análisis gránulos y recuperación progresiva. Esta estrategia permite una mejor recuperación de información relevante y compleja, lo que mejora la precisión y la cobertura semántica de la recuperación de texto.",
+      "contexts": [
+        "A Method for Improving Retrieval Effectiveness in RAG. El artículo presenta un método de optimización colaborativa que combina técnicas de recuperación de texto, búsqueda de parámetros y recuperación recursiva para mejorar la eficiencia y precisión de la recuperación de texto en el contexto de la generación a través de recuperación (RAG). El método utiliza un enfoque de optimización global mediante el grid search para ajustar las ponderaciones de la recuperación de texto, lo que permite un equilibrio entre la recuperación basada en términos y la recuperación semántica. Además, se introduce una estrategia de recuperación recursiva para mejorar la cobertura de conocimientos secundarios y documentos estructurados complejos a través de análisis gránulos y recuperación progresiva. Los resultados experimentales muestran que la recuperación de texto combinada (hybrid retrieval) supera significativamente la recuperación única basada en recuperación densa (single dense retrieval",
+        "UniEval-RAG: A Unified End-to-End Evaluation Framework for RAG Systems. Resumen estructurado:\n\n1. **Introducción**: El trabajo presenta un nuevo enfoque para evaluar la recuperación y generación en modelos de lenguaje grandes (LLMs).\n2. **Objetivo**: Proporcionar una evaluación unificada del pipeline RAG que cubra todos los pasos del proceso.\n3. **Método**: Introdujo un sistema de evaluación llamado UniEval-RAG que evalúa tanto la recuperación como la generación, incorporando métricas adicionales como densidad de palabras clave y cobertura de palabras clave para evaluar la coherencia estructural y la completitud semántica de la cuchara.\n4. **Evaluación**: Los resultados muestran que UniEval-RAG identifica las barreras de rendimiento y ofrece insights interpretables para guiar la optimización de los sistemas RAG.\n5. **Aplicación**: Se utiliza para evaluar",
+        "A Hybrid Approach to Information Retrieval and Answer Generation for Regulatory Texts. Resumen estructurado:\n\n- **Título del sistema**: Hybrid Information Retrieval System (HIRS) \n- **Método**: Combina técnicas de búsqueda léxica y semántica para extraer información relevante de corpora reguladoras.\n- **Algoritmo**: Integración de un modelo de transformación de oraciones (sentence transformer) con el algoritmo BM25 tradicional para mejorar la precisión semántica y la cobertura léxica.\n- **Método de generación**: Utiliza modelos de Lenguaje Grande (LLMs) dentro de un marco de generación a través de recuperación (RAG) para generar respuestas precisas y completas.\n- **Resultados**: Demostró un rendimiento significativamente superior a los métodos estándar de búsqueda léxica y semántica, con mejoras notables en la recall@10 y la MAP@10.\n-"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_15",
+        "doc_global_28",
+        "doc_global_9"
+      ],
+      "expected_doc_ids": [
+        "doc_global_1",
+        "doc_global_2",
+        "doc_global_3"
+      ],
+      "recall_at_k": 0.0,
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.8037,
+      "faithfulness_detail": {
+        "score": 0.8,
+        "statements": [
+          "Existe un artículo titulado \"A Method for Improving Retrieval Effectiveness in RAG\".",
+          "En el artículo se introduce una estrategia de recuperación recursiva.",
+          "La estrategia busca mejorar la cobertura de conocimientos secundarios.",
+          "La estrategia busca mejorar la cobertura de documentos estructurados complejos.",
+          "La estrategia utiliza análisis gránulos.",
+          "La estrategia utiliza recuperación progresiva.",
+          "La estrategia permite una mejor recuperación de información relevante.",
+          "La estrategia permite una mejor recuperación de información compleja.",
+          "La estrategia mejora la precisión de la recuperación de texto.",
+          "La estrategia mejora la cobertura semántica de la recuperación de texto."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+        "n_statements": 10,
+        "n_verified": 8
+      },
+      "answer_relevancy_detail": {
+        "score": 0.8037,
+        "generated_questions": [
+          "¿Qué estrategia se presenta en el artículo 'A Method for Improving Retrieval Effectiveness in RAG' y cuál es su propósito?",
+          "¿Cómo mejora la recuperación recursiva la precisión y la cobertura semántica en la recuperación de texto?",
+          "¿Qué método se propone para optimizar el análisis de conocimientos secundarios y documentos estructurados complejos?"
+        ],
+        "similarities": [
+          0.899,
+          0.8473,
+          0.6647
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 34011.45
+    },
+    {
+      "query_id": "q0",
+      "query_original": "retrieval augmented generation",
+      "pair_index": 2,
+      "question": "¿Qué métricas adicionales se incorporan en el sistema de evaluación \"UniEval-RAG\" para evaluar la coherencia estructural y la completitud semántica de la cuchara?",
+      "answer": "En el sistema de evaluación \"UniEval-RAG\", se incorporan métricas adicionales como la densidad de palabras clave y la cobertura de palabras clave para evaluar la coherencia estructural y la completitud semántica de la cuchara. Estas métricas ayudan a identificar barreras de rendimiento y ofrecen insights interpretables para guiar la optimización de los sistemas RAG.",
+      "contexts": [
+        "A Method for Improving Retrieval Effectiveness in RAG. El artículo presenta un método de optimización colaborativa que combina técnicas de recuperación de texto, búsqueda de parámetros y recuperación recursiva para mejorar la eficiencia y precisión de la recuperación de texto en el contexto de la generación a través de recuperación (RAG). El método utiliza un enfoque de optimización global mediante el grid search para ajustar las ponderaciones de la recuperación de texto, lo que permite un equilibrio entre la recuperación basada en términos y la recuperación semántica. Además, se introduce una estrategia de recuperación recursiva para mejorar la cobertura de conocimientos secundarios y documentos estructurados complejos a través de análisis gránulos y recuperación progresiva. Los resultados experimentales muestran que la recuperación de texto combinada (hybrid retrieval) supera significativamente la recuperación única basada en recuperación densa (single dense retrieval",
+        "UniEval-RAG: A Unified End-to-End Evaluation Framework for RAG Systems. Resumen estructurado:\n\n1. **Introducción**: El trabajo presenta un nuevo enfoque para evaluar la recuperación y generación en modelos de lenguaje grandes (LLMs).\n2. **Objetivo**: Proporcionar una evaluación unificada del pipeline RAG que cubra todos los pasos del proceso.\n3. **Método**: Introdujo un sistema de evaluación llamado UniEval-RAG que evalúa tanto la recuperación como la generación, incorporando métricas adicionales como densidad de palabras clave y cobertura de palabras clave para evaluar la coherencia estructural y la completitud semántica de la cuchara.\n4. **Evaluación**: Los resultados muestran que UniEval-RAG identifica las barreras de rendimiento y ofrece insights interpretables para guiar la optimización de los sistemas RAG.\n5. **Aplicación**: Se utiliza para evaluar",
+        "A Hybrid Approach to Information Retrieval and Answer Generation for Regulatory Texts. Resumen estructurado:\n\n- **Título del sistema**: Hybrid Information Retrieval System (HIRS) \n- **Método**: Combina técnicas de búsqueda léxica y semántica para extraer información relevante de corpora reguladoras.\n- **Algoritmo**: Integración de un modelo de transformación de oraciones (sentence transformer) con el algoritmo BM25 tradicional para mejorar la precisión semántica y la cobertura léxica.\n- **Método de generación**: Utiliza modelos de Lenguaje Grande (LLMs) dentro de un marco de generación a través de recuperación (RAG) para generar respuestas precisas y completas.\n- **Resultados**: Demostró un rendimiento significativamente superior a los métodos estándar de búsqueda léxica y semántica, con mejoras notables en la recall@10 y la MAP@10.\n-"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_15",
+        "doc_global_28",
+        "doc_global_9"
+      ],
+      "expected_doc_ids": [
+        "doc_global_1",
+        "doc_global_2",
+        "doc_global_3"
+      ],
+      "recall_at_k": 0.0,
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.8118,
+      "faithfulness_detail": {
+        "score": 0.75,
+        "statements": [
+          "UniEval-RAG es un sistema de evaluación.",
+          "UniEval-RAG incorpora la densidad de palabras clave como una métrica adicional.",
+          "UniEval-RAG incorpora la cobertura de palabras clave como una métrica adicional.",
+          "Las métricas adicionales evalúan la coherencia estructural.",
+          "Las métricas adicionales evalúan la completitud semántica de la cuchara.",
+          "Las métricas ayudan a identificar barreras de rendimiento.",
+          "Las métricas ofrecen insights interpretables.",
+          "Los insights interpretables sirven para guiar la optimización de los sistemas RAG."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true
+        ],
+        "n_statements": 8,
+        "n_verified": 6
+      },
+      "answer_relevancy_detail": {
+        "score": 0.8118,
+        "generated_questions": [
+          "¿Qué métricas adicionales incorpora el sistema UniEval-RAG y qué permiten evaluar?",
+          "¿Cómo ayudan las métricas de UniEval-RAG a la optimización de los sistemas RAG?",
+          "¿Qué sistema utiliza la densidad y cobertura de palabras clave para identificar barreras de rendimiento en sistemas RAG?"
+        ],
+        "similarities": [
+          0.9086,
+          0.8639,
+          0.6631
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 28938.82
+    },
+    {
+      "query_id": "q1",
+      "query_original": "dense passage retrieval",
+      "pair_index": 0,
+      "question": "Pregunta 1",
+      "answer": "Pregunta 1 respuesta",
+      "contexts": [
+        "RocketQA: An Optimized Training Approach to Dense Passage Retrieval for Open-Domain Question Answering. Resumen estructurado:\n\n1. **Propuesta de RocketQA**: Un enfoque optimizado para la recuperación de pasajes densos basado en la recuperación de pasajes densos.\n2. **Contribuciones Principales**: \n   - **Cross-Batch Negatives**: Mejora la recuperación de pasajes densos al considerar negativos en múltiples pasos.\n   - **Denoised Hard Negatives**: Reduce la confusión entre negativos y positivos, mejorando la precisión.\n   - **Data Augmentation**: Aumenta la cantidad de datos para mejorar la generalización del modelo.\n3. **Comparación con Modelos Anteriores**: RocketQA supera significativamente a los modelos de referencia en ambos datasets: MSMARCO y Natural Questions.\n4. **Examen de Estrategias**: Se examinan las eficacias de las tres estrategias propuestas en RocketQA.\n5. **A",
+        "A Method for Improving Retrieval Effectiveness in RAG. El trabajo propone un método de optimización colaborativa que combina recuperación híbrida, optimización parcial de parámetros y recuperación jerárquica recursiva para mejorar la recuperación de texto en entornos de generación aprimorada por recuperación. El método ajusta las pesos para equilibrar la recuperación basada en términos clave (BM25) y la recuperación densa semántica (DPR). Además, se introduce una estrategia de recuperación recursiva para mejorar la cobertura de conocimientos secundarios y documentos estructurados complejos a través de análisis jerárquico multi-granular y recuperación progresiva. Los resultados experimentales en el conjunto de datos Amnesty_qa muestran que la recuperación híbrida supera significativamente la recuperación única basada en recuperación densa, con un incremento del 20% en la",
+        "RocketQAv2: A Joint Training Method for Dense Passage Retrieval and Passage Re-ranking. Resumen estructurado:\n\n1. **Propuesta de un enfoque de entrenamiento conjunto para recuperación de pasajes densos y re-ranking de pasajes**: El trabajo presenta una nueva estrategia de entrenamiento conjunta para recuperar pasajes densos y re-ranking de pasajes. La principal contribución es la introducción de la distilación lista dinámica, donde se diseñan métodos de entrenamiento listos unificados para ambos el recuperador y el re-rugador. Durante la distilación dinámica, el recuperador y el re-rugador pueden adaptarse de manera adaptativa a la información relevante de uno al otro. Además, se propone un enfoque de acondicionamiento de datos híbrido para construir instancias de entrenamiento variadas para el método listo.\n\n2. **Experiencias experimentales**: Los resultados de experimentos muestran la eficacia de la prop"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_5",
+        "doc_global_15",
+        "doc_global_6"
+      ],
+      "expected_doc_ids": [
+        "doc_global_4",
+        "doc_global_5",
+        "doc_global_6"
+      ],
+      "recall_at_k": 0.6667,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.7066,
+      "faithfulness_detail": {
+        "score": 0.0,
+        "statements": [
+          "El texto corresponde a la respuesta de la pregunta 1."
+        ],
+        "verified": [
+          false
+        ],
+        "n_statements": 1,
+        "n_verified": 0
+      },
+      "answer_relevancy_detail": {
+        "score": 0.7066,
+        "generated_questions": [
+          "¿Cuál es la respuesta a la primera pregunta?",
+          "¿Qué texto aparece etiquetado para el primer ejercicio?",
+          "¿Cómo está registrada la solución del ítem 1 en la plantilla?"
+        ],
+        "similarities": [
+          0.7796,
+          0.6675,
+          0.6726
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 9977.79
+    },
+    {
+      "query_id": "q1",
+      "query_original": "dense passage retrieval",
+      "pair_index": 1,
+      "question": "Pregunta 2",
+      "answer": "Pregunta 2 respuesta",
+      "contexts": [
+        "RocketQA: An Optimized Training Approach to Dense Passage Retrieval for Open-Domain Question Answering. Resumen estructurado:\n\n1. **Propuesta de RocketQA**: Un enfoque optimizado para la recuperación de pasajes densos basado en la recuperación de pasajes densos.\n2. **Contribuciones Principales**: \n   - **Cross-Batch Negatives**: Mejora la recuperación de pasajes densos al considerar negativos en múltiples pasos.\n   - **Denoised Hard Negatives**: Reduce la confusión entre negativos y positivos, mejorando la precisión.\n   - **Data Augmentation**: Aumenta la cantidad de datos para mejorar la generalización del modelo.\n3. **Comparación con Modelos Anteriores**: RocketQA supera significativamente a los modelos de referencia en ambos datasets: MSMARCO y Natural Questions.\n4. **Examen de Estrategias**: Se examinan las eficacias de las tres estrategias propuestas en RocketQA.\n5. **A",
+        "A Method for Improving Retrieval Effectiveness in RAG. El trabajo propone un método de optimización colaborativa que combina recuperación híbrida, optimización parcial de parámetros y recuperación jerárquica recursiva para mejorar la recuperación de texto en entornos de generación aprimorada por recuperación. El método ajusta las pesos para equilibrar la recuperación basada en términos clave (BM25) y la recuperación densa semántica (DPR). Además, se introduce una estrategia de recuperación recursiva para mejorar la cobertura de conocimientos secundarios y documentos estructurados complejos a través de análisis jerárquico multi-granular y recuperación progresiva. Los resultados experimentales en el conjunto de datos Amnesty_qa muestran que la recuperación híbrida supera significativamente la recuperación única basada en recuperación densa, con un incremento del 20% en la",
+        "RocketQAv2: A Joint Training Method for Dense Passage Retrieval and Passage Re-ranking. Resumen estructurado:\n\n1. **Propuesta de un enfoque de entrenamiento conjunto para recuperación de pasajes densos y re-ranking de pasajes**: El trabajo presenta una nueva estrategia de entrenamiento conjunta para recuperar pasajes densos y re-ranking de pasajes. La principal contribución es la introducción de la distilación lista dinámica, donde se diseñan métodos de entrenamiento listos unificados para ambos el recuperador y el re-rugador. Durante la distilación dinámica, el recuperador y el re-rugador pueden adaptarse de manera adaptativa a la información relevante de uno al otro. Además, se propone un enfoque de acondicionamiento de datos híbrido para construir instancias de entrenamiento variadas para el método listo.\n\n2. **Experiencias experimentales**: Los resultados de experimentos muestran la eficacia de la prop"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_5",
+        "doc_global_15",
+        "doc_global_6"
+      ],
+      "expected_doc_ids": [
+        "doc_global_4",
+        "doc_global_5",
+        "doc_global_6"
+      ],
+      "recall_at_k": 0.6667,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.7166,
+      "faithfulness_detail": {
+        "score": 0.0,
+        "statements": [
+          "El texto corresponde a la respuesta de la pregunta 2."
+        ],
+        "verified": [
+          false
+        ],
+        "n_statements": 1,
+        "n_verified": 0
+      },
+      "answer_relevancy_detail": {
+        "score": 0.7166,
+        "generated_questions": [
+          "¿Cuál es la respuesta correspondiente a la segunda pregunta del cuestionario?",
+          "¿Qué texto identifica la solución del segundo ejercicio en la plantilla?",
+          "¿Dónde se indica la resolución perteneciente al ítem número 2?"
+        ],
+        "similarities": [
+          0.7652,
+          0.6947,
+          0.6901
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 10670.7
+    },
+    {
+      "query_id": "q1",
+      "query_original": "dense passage retrieval",
+      "pair_index": 2,
+      "question": "Pregunta 3",
+      "answer": "Pregunta 3 respuesta",
+      "contexts": [
+        "RocketQA: An Optimized Training Approach to Dense Passage Retrieval for Open-Domain Question Answering. Resumen estructurado:\n\n1. **Propuesta de RocketQA**: Un enfoque optimizado para la recuperación de pasajes densos basado en la recuperación de pasajes densos.\n2. **Contribuciones Principales**: \n   - **Cross-Batch Negatives**: Mejora la recuperación de pasajes densos al considerar negativos en múltiples pasos.\n   - **Denoised Hard Negatives**: Reduce la confusión entre negativos y positivos, mejorando la precisión.\n   - **Data Augmentation**: Aumenta la cantidad de datos para mejorar la generalización del modelo.\n3. **Comparación con Modelos Anteriores**: RocketQA supera significativamente a los modelos de referencia en ambos datasets: MSMARCO y Natural Questions.\n4. **Examen de Estrategias**: Se examinan las eficacias de las tres estrategias propuestas en RocketQA.\n5. **A",
+        "A Method for Improving Retrieval Effectiveness in RAG. El trabajo propone un método de optimización colaborativa que combina recuperación híbrida, optimización parcial de parámetros y recuperación jerárquica recursiva para mejorar la recuperación de texto en entornos de generación aprimorada por recuperación. El método ajusta las pesos para equilibrar la recuperación basada en términos clave (BM25) y la recuperación densa semántica (DPR). Además, se introduce una estrategia de recuperación recursiva para mejorar la cobertura de conocimientos secundarios y documentos estructurados complejos a través de análisis jerárquico multi-granular y recuperación progresiva. Los resultados experimentales en el conjunto de datos Amnesty_qa muestran que la recuperación híbrida supera significativamente la recuperación única basada en recuperación densa, con un incremento del 20% en la",
+        "RocketQAv2: A Joint Training Method for Dense Passage Retrieval and Passage Re-ranking. Resumen estructurado:\n\n1. **Propuesta de un enfoque de entrenamiento conjunto para recuperación de pasajes densos y re-ranking de pasajes**: El trabajo presenta una nueva estrategia de entrenamiento conjunta para recuperar pasajes densos y re-ranking de pasajes. La principal contribución es la introducción de la distilación lista dinámica, donde se diseñan métodos de entrenamiento listos unificados para ambos el recuperador y el re-rugador. Durante la distilación dinámica, el recuperador y el re-rugador pueden adaptarse de manera adaptativa a la información relevante de uno al otro. Además, se propone un enfoque de acondicionamiento de datos híbrido para construir instancias de entrenamiento variadas para el método listo.\n\n2. **Experiencias experimentales**: Los resultados de experimentos muestran la eficacia de la prop"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_5",
+        "doc_global_15",
+        "doc_global_6"
+      ],
+      "expected_doc_ids": [
+        "doc_global_4",
+        "doc_global_5",
+        "doc_global_6"
+      ],
+      "recall_at_k": 0.6667,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.6879,
+      "faithfulness_detail": {
+        "score": 0.0,
+        "statements": [
+          "El texto hace referencia a la respuesta de la pregunta número 3."
+        ],
+        "verified": [
+          false
+        ],
+        "n_statements": 1,
+        "n_verified": 0
+      },
+      "answer_relevancy_detail": {
+        "score": 0.6879,
+        "generated_questions": [
+          "¿Qué texto corresponde a esta sección del formulario?",
+          "¿Dónde se encuentra la solución del tercer ejercicio?",
+          "¿Cuál es el encabezado que debo colocar aquí?"
+        ],
+        "similarities": [
+          0.6794,
+          0.7262,
+          0.6581
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 9072.13
+    },
+    {
+      "query_id": "q2",
+      "query_original": "hybrid search in information retrieval",
+      "pair_index": 0,
+      "question": "¿Qué método se utiliza para mejorar la recuperación de texto en entornos de generación asistida por recuperación?",
+      "answer": "El método utilizado para mejorar la recuperación de texto en entornos de generación asistida por recuperación es un método colaborativo que combina recuperación híbrida, optimización de parámetros grid y recuperación recursiva.",
+      "contexts": [
+        "A Method for Improving Retrieval Effectiveness in RAG. Resumen:\n\n- Propone un método colaborativo que combina recuperación híbrida, optimización de parámetros grid y recuperación recursiva para mejorar la recuperación de texto en entornos de generación asistida por recuperación.\n- Balancea la recuperación basada en términos (BM25) y la recuperación semántica (DPR) mediante la ajuste dinámico de pesos.\n- Incorpora un algoritmo de optimización grid para la globalización de pesos de recuperación híbrida, lo que mejora significativamente la recuperación de texto en diferentes escenarios de consulta.\n- Introduce una estrategia de recuperación recursiva para mejorar la cobertura de conocimientos de largo recorrido y documentos estructurados, utilizando análisis de gránulos y recuperación progresiva.\n- Resultados experimentales muestran que la recuperación híbrida supera en 2",
+        "UNIguide: An Intelligent University Information Retrieval Chatbot Using Advanced Retrieval-Augmented Generation with Hybrid Search and Neural Re-Ranking. Resumen estructurado:\n\n1. **Introducción**: El estudio aborda la necesidad de acceder a información relevante y actualizada en instituciones educativas, especialmente en escuelas de ingeniería.\n   \n2. **Objetivo**: Presenta UNIguide, un asistente inteligente basado en inteligencia artificial diseñado para responder preguntas universitarias utilizando un pipeline de recuperación y generación (RAG) integrando recuperación híbrida, recuperación neurálgica, validación de la consulta y cacha semántica.\n\n3. **Métodos**: \n   - **Retrieval-Augmented Generation (RAG)**: Combina búsqueda densa de vectores con recuperación BM25 basada en términos para mejorar la recuperación de ambos tipos de consultas (semánticas y léxicas).\n   - **Re-ranking**: Un paso de recuperación cruzado que refina",
+        "Integrating Deep Learning Techniques in Information Retrieval: A Hybrid Approach to Relevance Optimization. El trabajo propone un enfoque de búsqueda de información basado en la combinación de técnicas de lexical y semántica. El sistema utiliza algoritmos de ranking basados en la métrica BM25 y modelos de embeddings neuronales para mejorar la precisión de la búsqueda. Los resultados muestran un aumento del 25-30% en la recall y un 12% en la precisión media ponderada (MAP) en comparación con modelos tradicionales. Además, el sistema proporciona una satisfacción del usuario 15-20% más alta para consultas ambigas o específicas de dominio."
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_15",
+        "doc_global_8",
+        "doc_global_14"
+      ],
+      "expected_doc_ids": [
+        "doc_global_7",
+        "doc_global_8",
+        "doc_global_9"
+      ],
+      "recall_at_k": 0.3333,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.879,
+      "faithfulness_detail": {
+        "score": 1.0,
+        "statements": [
+          "El método se utiliza para mejorar la recuperación de texto en entornos de generación asistida por recuperación.",
+          "El método utilizado es un método colaborativo.",
+          "El método combina la recuperación híbrida.",
+          "El método combina la optimización de parámetros grid.",
+          "El método combina la recuperación recursiva."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "n_statements": 5,
+        "n_verified": 5
+      },
+      "answer_relevancy_detail": {
+        "score": 0.879,
+        "generated_questions": [
+          "¿Qué método se utiliza para mejorar la recuperación de texto en entornos de generación asistida por recuperación?",
+          "¿Qué técnicas se combinan en el método colaborativo para optimizar la recuperación de información?",
+          "¿Cómo se puede mejorar la eficiencia de la recuperación de texto en sistemas de generación asistida por recuperación?"
+        ],
+        "similarities": [
+          1.0,
+          0.7117,
+          0.9253
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 16187.17
+    },
+    {
+      "query_id": "q2",
+      "query_original": "hybrid search in information retrieval",
+      "pair_index": 1,
+      "question": "¿Cómo se balancea la recuperación basada en términos (BM25) y la recuperación semántica (DPR)?",
+      "answer": "Se balancea la recuperación basada en términos (BM25) y la recuperación semántica (DPR) mediante la ajuste dinámico de pesos.",
+      "contexts": [
+        "A Method for Improving Retrieval Effectiveness in RAG. Resumen:\n\n- Propone un método colaborativo que combina recuperación híbrida, optimización de parámetros grid y recuperación recursiva para mejorar la recuperación de texto en entornos de generación asistida por recuperación.\n- Balancea la recuperación basada en términos (BM25) y la recuperación semántica (DPR) mediante la ajuste dinámico de pesos.\n- Incorpora un algoritmo de optimización grid para la globalización de pesos de recuperación híbrida, lo que mejora significativamente la recuperación de texto en diferentes escenarios de consulta.\n- Introduce una estrategia de recuperación recursiva para mejorar la cobertura de conocimientos de largo recorrido y documentos estructurados, utilizando análisis de gránulos y recuperación progresiva.\n- Resultados experimentales muestran que la recuperación híbrida supera en 2",
+        "UNIguide: An Intelligent University Information Retrieval Chatbot Using Advanced Retrieval-Augmented Generation with Hybrid Search and Neural Re-Ranking. Resumen estructurado:\n\n1. **Introducción**: El estudio aborda la necesidad de acceder a información relevante y actualizada en instituciones educativas, especialmente en escuelas de ingeniería.\n   \n2. **Objetivo**: Presenta UNIguide, un asistente inteligente basado en inteligencia artificial diseñado para responder preguntas universitarias utilizando un pipeline de recuperación y generación (RAG) integrando recuperación híbrida, recuperación neurálgica, validación de la consulta y cacha semántica.\n\n3. **Métodos**: \n   - **Retrieval-Augmented Generation (RAG)**: Combina búsqueda densa de vectores con recuperación BM25 basada en términos para mejorar la recuperación de ambos tipos de consultas (semánticas y léxicas).\n   - **Re-ranking**: Un paso de recuperación cruzado que refina",
+        "Integrating Deep Learning Techniques in Information Retrieval: A Hybrid Approach to Relevance Optimization. El trabajo propone un enfoque de búsqueda de información basado en la combinación de técnicas de lexical y semántica. El sistema utiliza algoritmos de ranking basados en la métrica BM25 y modelos de embeddings neuronales para mejorar la precisión de la búsqueda. Los resultados muestran un aumento del 25-30% en la recall y un 12% en la precisión media ponderada (MAP) en comparación con modelos tradicionales. Además, el sistema proporciona una satisfacción del usuario 15-20% más alta para consultas ambigas o específicas de dominio."
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_15",
+        "doc_global_8",
+        "doc_global_14"
+      ],
+      "expected_doc_ids": [
+        "doc_global_7",
+        "doc_global_8",
+        "doc_global_9"
+      ],
+      "recall_at_k": 0.3333,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9114,
+      "faithfulness_detail": {
+        "score": 1.0,
+        "statements": [
+          "BM25 es una técnica de recuperación basada en términos.",
+          "DPR es una técnica de recuperación semántica.",
+          "Se balancea la recuperación basada en términos y la recuperación semántica.",
+          "El balanceo entre la recuperación basada en términos y la semántica se realiza mediante un ajuste dinámico de pesos."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "n_statements": 4,
+        "n_verified": 4
+      },
+      "answer_relevancy_detail": {
+        "score": 0.9114,
+        "generated_questions": [
+          "¿Cómo se logra el equilibrio entre la recuperación basada en términos (BM25) y la búsqueda semántica (DPR)?",
+          "¿Qué técnica se utiliza para balancear los métodos de recuperación BM25 y DPR?",
+          "¿De qué manera influye el ajuste dinámico de pesos en la combinación de la recuperación semántica y la basada en términos?"
+        ],
+        "similarities": [
+          0.987,
+          0.9136,
+          0.8335
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 15316.18
+    },
+    {
+      "query_id": "q2",
+      "query_original": "hybrid search in information retrieval",
+      "pair_index": 2,
+      "question": "¿Qué algoritmo se utiliza para la globalización de pesos de recuperación híbrida?",
+      "answer": "Se utiliza un algoritmo de optimización grid para la globalización de pesos de recuperación híbrida.",
+      "contexts": [
+        "A Method for Improving Retrieval Effectiveness in RAG. Resumen:\n\n- Propone un método colaborativo que combina recuperación híbrida, optimización de parámetros grid y recuperación recursiva para mejorar la recuperación de texto en entornos de generación asistida por recuperación.\n- Balancea la recuperación basada en términos (BM25) y la recuperación semántica (DPR) mediante la ajuste dinámico de pesos.\n- Incorpora un algoritmo de optimización grid para la globalización de pesos de recuperación híbrida, lo que mejora significativamente la recuperación de texto en diferentes escenarios de consulta.\n- Introduce una estrategia de recuperación recursiva para mejorar la cobertura de conocimientos de largo recorrido y documentos estructurados, utilizando análisis de gránulos y recuperación progresiva.\n- Resultados experimentales muestran que la recuperación híbrida supera en 2",
+        "UNIguide: An Intelligent University Information Retrieval Chatbot Using Advanced Retrieval-Augmented Generation with Hybrid Search and Neural Re-Ranking. Resumen estructurado:\n\n1. **Introducción**: El estudio aborda la necesidad de acceder a información relevante y actualizada en instituciones educativas, especialmente en escuelas de ingeniería.\n   \n2. **Objetivo**: Presenta UNIguide, un asistente inteligente basado en inteligencia artificial diseñado para responder preguntas universitarias utilizando un pipeline de recuperación y generación (RAG) integrando recuperación híbrida, recuperación neurálgica, validación de la consulta y cacha semántica.\n\n3. **Métodos**: \n   - **Retrieval-Augmented Generation (RAG)**: Combina búsqueda densa de vectores con recuperación BM25 basada en términos para mejorar la recuperación de ambos tipos de consultas (semánticas y léxicas).\n   - **Re-ranking**: Un paso de recuperación cruzado que refina",
+        "Integrating Deep Learning Techniques in Information Retrieval: A Hybrid Approach to Relevance Optimization. El trabajo propone un enfoque de búsqueda de información basado en la combinación de técnicas de lexical y semántica. El sistema utiliza algoritmos de ranking basados en la métrica BM25 y modelos de embeddings neuronales para mejorar la precisión de la búsqueda. Los resultados muestran un aumento del 25-30% en la recall y un 12% en la precisión media ponderada (MAP) en comparación con modelos tradicionales. Además, el sistema proporciona una satisfacción del usuario 15-20% más alta para consultas ambigas o específicas de dominio."
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_15",
+        "doc_global_8",
+        "doc_global_14"
+      ],
+      "expected_doc_ids": [
+        "doc_global_7",
+        "doc_global_8",
+        "doc_global_9"
+      ],
+      "recall_at_k": 0.3333,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8396,
+      "faithfulness_detail": {
+        "score": 1.0,
+        "statements": [
+          "Se utiliza un algoritmo de optimización grid.",
+          "El algoritmo se utiliza para la globalización de pesos.",
+          "Los pesos corresponden a una recuperación híbrida."
+        ],
+        "verified": [
+          true,
+          true,
+          true
+        ],
+        "n_statements": 3,
+        "n_verified": 3
+      },
+      "answer_relevancy_detail": {
+        "score": 0.8396,
+        "generated_questions": [
+          "¿Qué algoritmo se utiliza para la globalización de pesos de recuperación híbrida?",
+          "¿Cómo se realiza la optimización de los pesos en la recuperación híbrida?",
+          "¿Para qué se aplica el algoritmo de optimización grid en este contexto?"
+        ],
+        "similarities": [
+          1.0,
+          0.8735,
+          0.6453
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 13685.68
+    },
+    {
+      "query_id": "q3",
+      "query_original": "vector database indexing algorithms",
+      "pair_index": 0,
+      "question": "¿Cuál es la principal ventaja de la indexación vectorizada en términos de eficiencia semántica?",
+      "answer": "La indexación vectorizada alcanzó un recall@10 de hasta 0.94, superando significativamente a los métodos de búsqueda basados en texto en términos de eficiencia semántica.",
+      "contexts": [
+        "Database Indexing Using Deep Learning Algorithms. Resumen estructurado:\n\n1. **Algoritmos Investigados**: El estudio compara métodos de indexación tradicionales (B-Tree, GIN en PostgreSQL) con algoritmos de indexación vectorizados utilizando embeddings de Sentence-BERT implementados en FAISS y Milvus.\n\n2. **Métricas Evaluadas**: Se midieron métricas como tiempo de consulta promedio, latencia (95%), tamaño del índice, uso de memoria, y métrica de completitud de búsqueda (recall@10) en comparación con el método BM25.\n\n3. **Resultados**: La indexación vectorizada alcanzó un recall@10 de hasta 0.94, con latencia comparables a la de los métodos tradicionales, superando significativamente a los métodos de búsqueda basados en texto en términos de eficiencia semántica.\n\n4. **Conclusión",
+        "Semantic Search with Vector Database: A Comprehensive Review of Models, Indexing and Applications. El artículo ofrece una visión detallada sobre los modelos de representación vectorial, los encoders semánticos basados en transformadores y las tecnologías de bases de datos vectoriales que permiten una búsqueda semántica eficiente y segura. Se presenta la distribución distributiva semántica, las embeddings de nivel de palabra y las arquitecturas de transformadores como métodos de fondo para generar representaciones vectoriales significativas. Además, se evalúa la variedad de medidas de distancia, algoritmos de hash y estrategias de indexación basadas en grafos para determinar cómo se pueden utilizar para maximizar la recuperación. Finalmente, se presentan ejemplos prácticos de búsqueda semántica utilizando bases de datos vectoriales con aplicaciones textuales, imágenes, audio y conversacionales, destacando tanto los desafíos principales como las oportunidades de investigación.",
+        "Survey of vector database management systems. Resumen estructurado:\n\n1. **Obstacles to Vector Data Management**: The main challenges in vector data management include ambiguity of semantic similarity, large vector size, high cost of similarity comparison, lack of structural properties for indexing, and difficulty in efficiently answering hybrid queries.\n2. **New Approaches to Query Processing, Storage, and Indexing**: Techniques include similarity scores, query types, vector compression (quantization), partitioning based on randomization, learned partitioning, and navigable partitioning. These approaches lead to a variety of VDBMSs with different design and runtime characteristics.\n3. **Benchmarks and Future Research**: The paper discusses benchmarks and outlines research challenges for future work, focusing on improving query processing, storage, indexing, and optimization techniques for vector databases.\n\nResumen en español manteniendo términos técnicos:\n\n1. **Obstáculos a la Gestión de Datos Vectoriales**: Los principales obstáculos en la gestión de datos vectoriales incl"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_10",
+        "doc_global_11",
+        "doc_global_12"
+      ],
+      "expected_doc_ids": [
+        "doc_global_10",
+        "doc_global_11",
+        "doc_global_12"
+      ],
+      "recall_at_k": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.853,
+      "faithfulness_detail": {
+        "score": 1.0,
+        "statements": [
+          "La indexación vectorizada alcanzó un recall@10 de hasta 0.94.",
+          "La indexación vectorizada superó significativamente a los métodos de búsqueda basados en texto en términos de eficiencia semántica."
+        ],
+        "verified": [
+          true,
+          true
+        ],
+        "n_statements": 2,
+        "n_verified": 2
+      },
+      "answer_relevancy_detail": {
+        "score": 0.853,
+        "generated_questions": [
+          "¿Qué rendimiento alcanzó la indexación vectorizada en comparación con la búsqueda basada en texto?",
+          "¿Cuál fue el valor máximo de recall@10 obtenido con el método de indexación vectorizada?",
+          "¿Por qué la indexación vectorizada es superior a los métodos tradicionales de búsqueda en términos semánticos?"
+        ],
+        "similarities": [
+          0.839,
+          0.7851,
+          0.9348
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 11986.89
+    },
+    {
+      "query_id": "q3",
+      "query_original": "vector database indexing algorithms",
+      "pair_index": 1,
+      "question": "¿Qué métrica se utilizó para evaluar la eficiencia semántica de los métodos de indexación vectorizado?",
+      "answer": "Se midieron métricas como tiempo de consulta promedio, latencia (95%), tamaño del índice, uso de memoria, y métrica de completitud de búsqueda (recall@10) en comparación con el método BM25.",
+      "contexts": [
+        "Database Indexing Using Deep Learning Algorithms. Resumen estructurado:\n\n1. **Algoritmos Investigados**: El estudio compara métodos de indexación tradicionales (B-Tree, GIN en PostgreSQL) con algoritmos de indexación vectorizados utilizando embeddings de Sentence-BERT implementados en FAISS y Milvus.\n\n2. **Métricas Evaluadas**: Se midieron métricas como tiempo de consulta promedio, latencia (95%), tamaño del índice, uso de memoria, y métrica de completitud de búsqueda (recall@10) en comparación con el método BM25.\n\n3. **Resultados**: La indexación vectorizada alcanzó un recall@10 de hasta 0.94, con latencia comparables a la de los métodos tradicionales, superando significativamente a los métodos de búsqueda basados en texto en términos de eficiencia semántica.\n\n4. **Conclusión",
+        "Semantic Search with Vector Database: A Comprehensive Review of Models, Indexing and Applications. El artículo ofrece una visión detallada sobre los modelos de representación vectorial, los encoders semánticos basados en transformadores y las tecnologías de bases de datos vectoriales que permiten una búsqueda semántica eficiente y segura. Se presenta la distribución distributiva semántica, las embeddings de nivel de palabra y las arquitecturas de transformadores como métodos de fondo para generar representaciones vectoriales significativas. Además, se evalúa la variedad de medidas de distancia, algoritmos de hash y estrategias de indexación basadas en grafos para determinar cómo se pueden utilizar para maximizar la recuperación. Finalmente, se presentan ejemplos prácticos de búsqueda semántica utilizando bases de datos vectoriales con aplicaciones textuales, imágenes, audio y conversacionales, destacando tanto los desafíos principales como las oportunidades de investigación.",
+        "Survey of vector database management systems. Resumen estructurado:\n\n1. **Obstacles to Vector Data Management**: The main challenges in vector data management include ambiguity of semantic similarity, large vector size, high cost of similarity comparison, lack of structural properties for indexing, and difficulty in efficiently answering hybrid queries.\n2. **New Approaches to Query Processing, Storage, and Indexing**: Techniques include similarity scores, query types, vector compression (quantization), partitioning based on randomization, learned partitioning, and navigable partitioning. These approaches lead to a variety of VDBMSs with different design and runtime characteristics.\n3. **Benchmarks and Future Research**: The paper discusses benchmarks and outlines research challenges for future work, focusing on improving query processing, storage, indexing, and optimization techniques for vector databases.\n\nResumen en español manteniendo términos técnicos:\n\n1. **Obstáculos a la Gestión de Datos Vectoriales**: Los principales obstáculos en la gestión de datos vectoriales incl"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_10",
+        "doc_global_11",
+        "doc_global_12"
+      ],
+      "expected_doc_ids": [
+        "doc_global_10",
+        "doc_global_11",
+        "doc_global_12"
+      ],
+      "recall_at_k": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.724,
+      "faithfulness_detail": {
+        "score": 1.0,
+        "statements": [
+          "Se midió la métrica de tiempo de consulta promedio.",
+          "Se midió la métrica de latencia (95%).",
+          "Se midió la métrica de tamaño del índice.",
+          "Se midió la métrica de uso de memoria.",
+          "Se midió la métrica de completitud de búsqueda (recall@10).",
+          "Las métricas se midieron en comparación con el método BM25."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "n_statements": 6,
+        "n_verified": 6
+      },
+      "answer_relevancy_detail": {
+        "score": 0.724,
+        "generated_questions": [
+          "¿Qué métricas se utilizaron para evaluar el rendimiento del sistema en comparación con BM25?",
+          "¿Cómo se evaluó el desempeño del nuevo método de búsqueda frente a la línea de base?",
+          "¿Qué parámetros de eficiencia y precisión se midieron durante el experimento de recuperación de información?"
+        ],
+        "similarities": [
+          0.7626,
+          0.7036,
+          0.7058
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 18668.46
+    },
+    {
+      "query_id": "q3",
+      "query_original": "vector database indexing algorithms",
+      "pair_index": 2,
+      "question": "¿Qué tipo de algoritmos de indexación se compararon en el estudio sobre indexación vectorizado?",
+      "answer": "El estudio compara métodos de indexación tradicionales (B-Tree, GIN en PostgreSQL) con algoritmos de indexación vectorizados utilizando embeddings de Sentence-BERT implementados en FAISS y Milvus.",
+      "contexts": [
+        "Database Indexing Using Deep Learning Algorithms. Resumen estructurado:\n\n1. **Algoritmos Investigados**: El estudio compara métodos de indexación tradicionales (B-Tree, GIN en PostgreSQL) con algoritmos de indexación vectorizados utilizando embeddings de Sentence-BERT implementados en FAISS y Milvus.\n\n2. **Métricas Evaluadas**: Se midieron métricas como tiempo de consulta promedio, latencia (95%), tamaño del índice, uso de memoria, y métrica de completitud de búsqueda (recall@10) en comparación con el método BM25.\n\n3. **Resultados**: La indexación vectorizada alcanzó un recall@10 de hasta 0.94, con latencia comparables a la de los métodos tradicionales, superando significativamente a los métodos de búsqueda basados en texto en términos de eficiencia semántica.\n\n4. **Conclusión",
+        "Semantic Search with Vector Database: A Comprehensive Review of Models, Indexing and Applications. El artículo ofrece una visión detallada sobre los modelos de representación vectorial, los encoders semánticos basados en transformadores y las tecnologías de bases de datos vectoriales que permiten una búsqueda semántica eficiente y segura. Se presenta la distribución distributiva semántica, las embeddings de nivel de palabra y las arquitecturas de transformadores como métodos de fondo para generar representaciones vectoriales significativas. Además, se evalúa la variedad de medidas de distancia, algoritmos de hash y estrategias de indexación basadas en grafos para determinar cómo se pueden utilizar para maximizar la recuperación. Finalmente, se presentan ejemplos prácticos de búsqueda semántica utilizando bases de datos vectoriales con aplicaciones textuales, imágenes, audio y conversacionales, destacando tanto los desafíos principales como las oportunidades de investigación.",
+        "Survey of vector database management systems. Resumen estructurado:\n\n1. **Obstacles to Vector Data Management**: The main challenges in vector data management include ambiguity of semantic similarity, large vector size, high cost of similarity comparison, lack of structural properties for indexing, and difficulty in efficiently answering hybrid queries.\n2. **New Approaches to Query Processing, Storage, and Indexing**: Techniques include similarity scores, query types, vector compression (quantization), partitioning based on randomization, learned partitioning, and navigable partitioning. These approaches lead to a variety of VDBMSs with different design and runtime characteristics.\n3. **Benchmarks and Future Research**: The paper discusses benchmarks and outlines research challenges for future work, focusing on improving query processing, storage, indexing, and optimization techniques for vector databases.\n\nResumen en español manteniendo términos técnicos:\n\n1. **Obstáculos a la Gestión de Datos Vectoriales**: Los principales obstáculos en la gestión de datos vectoriales incl"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_10",
+        "doc_global_11",
+        "doc_global_12"
+      ],
+      "expected_doc_ids": [
+        "doc_global_10",
+        "doc_global_11",
+        "doc_global_12"
+      ],
+      "recall_at_k": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7949,
+      "faithfulness_detail": {
+        "score": 1.0,
+        "statements": [
+          "El estudio compara métodos de indexación tradicionales con algoritmos de indexación vectorizados.",
+          "B-Tree es un método de indexación tradicional incluido en el estudio.",
+          "GIN en PostgreSQL es un método de indexación tradicional incluido en el estudio.",
+          "Los algoritmos de indexación vectorizados utilizan embeddings de Sentence-BERT.",
+          "Los algoritmos de indexación vectorizados están implementados en FAISS.",
+          "Los algoritmos de indexación vectorizados están implementados en Milvus."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "n_statements": 6,
+        "n_verified": 6
+      },
+      "answer_relevancy_detail": {
+        "score": 0.7949,
+        "generated_questions": [
+          "¿Qué compara el estudio mencionado en el texto?",
+          "¿Qué métodos de indexación tradicionales y vectorizados se analizan en la investigación?",
+          "¿Qué herramientas y modelos específicos se utilizan en la comparación de técnicas de indexación?"
+        ],
+        "similarities": [
+          0.6707,
+          0.893,
+          0.821
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 18231.73
+    },
+    {
+      "query_id": "q4",
+      "query_original": "bm25 text retrieval optimization",
+      "pair_index": 0,
+      "question": "¿Cómo se optimiza la recuperación de texto en sistemas de información basados en BM25?",
+      "answer": "Se utiliza un enfoque de recuperación de texto basado en BM25 que integra modelos de ranking neuronales y embeddings lexicales utilizando modelos de transformador y ponderación contextual. Se validó utilizando conjuntos de datos MS-MARCO y TREC-CAR y demostró un aumento del 25-30% en la recall y un 12% en MAP, con una mejora en la satisfacción del usuario del 15-20% especialmente para consultas ambigas o específicas del dominio.",
+      "contexts": [
+        "A Hybrid Approach to Information Retrieval and Answer Generation for Regulatory Texts. Resumen estructurado:\n\n- **Título del sistema**: Hybrid Information Retrieval System for Regulatory Texts\n- **Método**: Combina técnicas de búsqueda léxica y semántica con algoritmo BM25 para extraer información relevante de corpora reguladas.\n- **Algoritmo utilizado**: Fine-tuned Sentence Transformer model y algoritmo BM25.\n- **Método de generación de respuestas**: Se utiliza un modelo de LLM (Large Language Model) dentro de un framework de RAG (Retrieval Augmented Generation) para generar respuestas precisas y completas.\n- **Resultados experimentales**: El sistema muestra un rendimiento significativamente superior a los métodos estándar de búsqueda léxica y semántica, con mejoras notables en métricas como Recall@10 y MAP@10.\n- **Método de colaboración**: Se comparte el modelo y",
+        "Integrating Deep Learning Techniques in Information Retrieval: A Hybrid Approach to Relevance Optimization. El estudio propone un enfoque de recuperación de texto basado en BM25 que integra modelos de ranking neuronales y embeddings lexicales utilizando modelos de transformador y ponderación contextual. Se validó utilizando los conjuntos de datos MS-MARCO y TREC-CAR y se demostró un aumento del 25-30% en la recall y un 12% en MAP, con una mejora en la satisfacción del usuario del 15-20% especialmente para consultas ambigas o específicas del dominio. Los resultados sugieren que la combinación de señales lexicales y semánticas mejora significativamente la relevancia de recuperación y la experiencia del usuario.",
+        "A Method for Improving Retrieval Effectiveness in RAG. El artículo presenta un método de optimización colaborativa para el procesamiento de texto en entornos de generación asistida por recuperación (RAG). Este método combina técnicas de recuperación de texto híbrida, optimización de parámetros grid y recuperación jerárquica recursiva para mejorar la recuperación de texto en diferentes escenarios de consulta. Además, se introduce una estrategia de recuperación recursiva para aumentar la cobertura de conocimientos secundarios y documentos estructurados, utilizando análisis de grados multi-granulares y recuperación progresiva. Los resultados experimentales muestran que la recuperación híbrida supera significativamente la recuperación única de densidad en términos de recall, mientras que la recuperación recursiva aumenta la precisión en 4,61%."
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_9",
+        "doc_global_14",
+        "doc_global_15"
+      ],
+      "expected_doc_ids": [
+        "doc_global_13",
+        "doc_global_14",
+        "doc_global_15"
+      ],
+      "recall_at_k": 0.6667,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.691,
+      "faithfulness_detail": {
+        "score": 1.0,
+        "statements": [
+          "Se utiliza un enfoque de recuperación de texto basado en BM25.",
+          "El enfoque integra modelos de ranking neuronales.",
+          "El enfoque integra embeddings lexicales.",
+          "El enfoque utiliza modelos de transformador.",
+          "El enfoque utiliza ponderación contextual.",
+          "El enfoque se validó utilizando el conjunto de datos MS-MARCO.",
+          "El enfoque se validó utilizando el conjunto de datos TREC-CAR.",
+          "El enfoque demostró un aumento del 25-30% en la recall.",
+          "El enfoque demostró un aumento del 12% en MAP.",
+          "El enfoque demostró una mejora del 15-20% en la satisfacción del usuario.",
+          "La mejora en la satisfacción del usuario se dio especialmente para consultas ambiguas.",
+          "La mejora en la satisfacción del usuario se dio especialmente para consultas específicas del dominio."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "n_statements": 12,
+        "n_verified": 12
+      },
+      "answer_relevancy_detail": {
+        "score": 0.691,
+        "generated_questions": [
+          "¿Qué enfoque o metodología se utilizó para el sistema de recuperación de texto y qué componentes integra?",
+          "¿Con qué conjuntos de datos se validó el modelo de recuperación de texto?",
+          "¿Cuáles fueron las mejoras en las métricas de rendimiento y en la satisfacción del usuario logradas por este enfoque?"
+        ],
+        "similarities": [
+          0.7438,
+          0.7111,
+          0.6182
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 35943.47
+    },
+    {
+      "query_id": "q4",
+      "query_original": "bm25 text retrieval optimization",
+      "pair_index": 1,
+      "question": "¿Qué métodos se utilizan para mejorar la recuperación de texto en entornos de generación asistida por recuperación (RAG)?",
+      "answer": "El artículo presenta un método de optimización colaborativa para el procesamiento de texto en entornos de generación asistida por recuperación (RAG). Este método combina técnicas de recuperación de texto híbrida, optimización de parámetros grid y recuperación jerárquica recursiva para mejorar la recuperación de texto en diferentes escenarios de consulta. Además, se introduce una estrategia de recuperación recursiva para aumentar la cobertura de conocimientos secundarios y documentos estructurados, utilizando análisis de grados multi-granulares y recuperación progresiva.",
+      "contexts": [
+        "A Hybrid Approach to Information Retrieval and Answer Generation for Regulatory Texts. Resumen estructurado:\n\n- **Título del sistema**: Hybrid Information Retrieval System for Regulatory Texts\n- **Método**: Combina técnicas de búsqueda léxica y semántica con algoritmo BM25 para extraer información relevante de corpora reguladas.\n- **Algoritmo utilizado**: Fine-tuned Sentence Transformer model y algoritmo BM25.\n- **Método de generación de respuestas**: Se utiliza un modelo de LLM (Large Language Model) dentro de un framework de RAG (Retrieval Augmented Generation) para generar respuestas precisas y completas.\n- **Resultados experimentales**: El sistema muestra un rendimiento significativamente superior a los métodos estándar de búsqueda léxica y semántica, con mejoras notables en métricas como Recall@10 y MAP@10.\n- **Método de colaboración**: Se comparte el modelo y",
+        "Integrating Deep Learning Techniques in Information Retrieval: A Hybrid Approach to Relevance Optimization. El estudio propone un enfoque de recuperación de texto basado en BM25 que integra modelos de ranking neuronales y embeddings lexicales utilizando modelos de transformador y ponderación contextual. Se validó utilizando los conjuntos de datos MS-MARCO y TREC-CAR y se demostró un aumento del 25-30% en la recall y un 12% en MAP, con una mejora en la satisfacción del usuario del 15-20% especialmente para consultas ambigas o específicas del dominio. Los resultados sugieren que la combinación de señales lexicales y semánticas mejora significativamente la relevancia de recuperación y la experiencia del usuario.",
+        "A Method for Improving Retrieval Effectiveness in RAG. El artículo presenta un método de optimización colaborativa para el procesamiento de texto en entornos de generación asistida por recuperación (RAG). Este método combina técnicas de recuperación de texto híbrida, optimización de parámetros grid y recuperación jerárquica recursiva para mejorar la recuperación de texto en diferentes escenarios de consulta. Además, se introduce una estrategia de recuperación recursiva para aumentar la cobertura de conocimientos secundarios y documentos estructurados, utilizando análisis de grados multi-granulares y recuperación progresiva. Los resultados experimentales muestran que la recuperación híbrida supera significativamente la recuperación única de densidad en términos de recall, mientras que la recuperación recursiva aumenta la precisión en 4,61%."
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_9",
+        "doc_global_14",
+        "doc_global_15"
+      ],
+      "expected_doc_ids": [
+        "doc_global_13",
+        "doc_global_14",
+        "doc_global_15"
+      ],
+      "recall_at_k": 0.6667,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6234,
+      "faithfulness_detail": {
+        "score": 1.0,
+        "statements": [
+          "El artículo presenta un método de optimización colaborativa.",
+          "El método de optimización colaborativa es para el procesamiento de texto en entornos de generación asistida por recuperación (RAG).",
+          "El método combina técnicas de recuperación de texto híbrida.",
+          "El método combina la optimización de parámetros grid.",
+          "El método combina la recuperación jerárquica recursiva.",
+          "El método tiene como objetivo mejorar la recuperación de texto en diferentes escenarios de consulta.",
+          "Se introduce una estrategia de recuperación recursiva.",
+          "La estrategia de recuperación recursiva busca aumentar la cobertura de conocimientos secundarios.",
+          "La estrategia de recuperación recursiva busca aumentar la cobertura de documentos estructurados.",
+          "La estrategia de recuperación recursiva utiliza análisis de grados multi-granulares.",
+          "La estrategia de recuperación recursiva utiliza recuperación progresiva."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "n_statements": 11,
+        "n_verified": 11
+      },
+      "answer_relevancy_detail": {
+        "score": 0.6234,
+        "generated_questions": [
+          "¿Cuál es el tema principal que se aborda en el artículo?",
+          "¿Qué técnicas se combinan en el método de optimización colaborativa para entornos RAG?",
+          "¿De qué manera se propone aumentar la cobertura de conocimientos secundarios y documentos estructurados en el estudio?"
+        ],
+        "similarities": [
+          0.5456,
+          0.7143,
+          0.6102
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 28398.34
+    },
+    {
+      "query_id": "q4",
+      "query_original": "bm25 text retrieval optimization",
+      "pair_index": 2,
+      "question": "¿Qué métodos se utilizan para mejorar la recuperación de texto en sistemas de información basados en BM25?",
+      "answer": "Se utiliza un enfoque de recuperación de texto basado en BM25 que integra modelos de ranking neuronales y embeddings lexicales utilizando modelos de transformador y ponderación contextual. Se validó utilizando conjuntos de datos MS-MARCO y TREC-CAR y demostró un aumento del 25-30% en la recall y un 12% en MAP, con una mejora en la satisfacción del usuario del 15-20% especialmente para consultas ambigas o específicas del dominio.",
+      "contexts": [
+        "A Hybrid Approach to Information Retrieval and Answer Generation for Regulatory Texts. Resumen estructurado:\n\n- **Título del sistema**: Hybrid Information Retrieval System for Regulatory Texts\n- **Método**: Combina técnicas de búsqueda léxica y semántica con algoritmo BM25 para extraer información relevante de corpora reguladas.\n- **Algoritmo utilizado**: Fine-tuned Sentence Transformer model y algoritmo BM25.\n- **Método de generación de respuestas**: Se utiliza un modelo de LLM (Large Language Model) dentro de un framework de RAG (Retrieval Augmented Generation) para generar respuestas precisas y completas.\n- **Resultados experimentales**: El sistema muestra un rendimiento significativamente superior a los métodos estándar de búsqueda léxica y semántica, con mejoras notables en métricas como Recall@10 y MAP@10.\n- **Método de colaboración**: Se comparte el modelo y",
+        "Integrating Deep Learning Techniques in Information Retrieval: A Hybrid Approach to Relevance Optimization. El estudio propone un enfoque de recuperación de texto basado en BM25 que integra modelos de ranking neuronales y embeddings lexicales utilizando modelos de transformador y ponderación contextual. Se validó utilizando los conjuntos de datos MS-MARCO y TREC-CAR y se demostró un aumento del 25-30% en la recall y un 12% en MAP, con una mejora en la satisfacción del usuario del 15-20% especialmente para consultas ambigas o específicas del dominio. Los resultados sugieren que la combinación de señales lexicales y semánticas mejora significativamente la relevancia de recuperación y la experiencia del usuario.",
+        "A Method for Improving Retrieval Effectiveness in RAG. El artículo presenta un método de optimización colaborativa para el procesamiento de texto en entornos de generación asistida por recuperación (RAG). Este método combina técnicas de recuperación de texto híbrida, optimización de parámetros grid y recuperación jerárquica recursiva para mejorar la recuperación de texto en diferentes escenarios de consulta. Además, se introduce una estrategia de recuperación recursiva para aumentar la cobertura de conocimientos secundarios y documentos estructurados, utilizando análisis de grados multi-granulares y recuperación progresiva. Los resultados experimentales muestran que la recuperación híbrida supera significativamente la recuperación única de densidad en términos de recall, mientras que la recuperación recursiva aumenta la precisión en 4,61%."
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_9",
+        "doc_global_14",
+        "doc_global_15"
+      ],
+      "expected_doc_ids": [
+        "doc_global_13",
+        "doc_global_14",
+        "doc_global_15"
+      ],
+      "recall_at_k": 0.6667,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6694,
+      "faithfulness_detail": {
+        "score": 1.0,
+        "statements": [
+          "Se utiliza un enfoque de recuperación de texto basado en BM25.",
+          "El enfoque integra modelos de ranking neuronales.",
+          "El enfoque integra embeddings lexicales.",
+          "El enfoque utiliza modelos de transformador.",
+          "El enfoque utiliza ponderación contextual.",
+          "El enfoque se validó utilizando el conjunto de datos MS-MARCO.",
+          "El enfoque se validó utilizando el conjunto de datos TREC-CAR.",
+          "El enfoque demostró un aumento del 25-30% en la recall.",
+          "El enfoque demostró un aumento del 12% en MAP.",
+          "El enfoque mostró una mejora en la satisfacción del usuario del 15-20%.",
+          "La mejora en la satisfacción del usuario ocurre especialmente para consultas ambiguas.",
+          "La mejora en la satisfacción del usuario ocurre especialmente para consultas específicas del dominio."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "n_statements": 12,
+        "n_verified": 12
+      },
+      "answer_relevancy_detail": {
+        "score": 0.6694,
+        "generated_questions": [
+          "¿Qué metodología y tecnologías se utilizaron para el nuevo enfoque de recuperación de texto?",
+          "¿Cuáles fueron los resultados de rendimiento obtenidas en los conjuntos de datos MS-MARCO y TREC-CAR?",
+          "¿Cómo afectó el nuevo sistema de búsqueda a la satisfacción del usuario en consultas ambiguas o específicas del dominio?"
+        ],
+        "similarities": [
+          0.7343,
+          0.6353,
+          0.6385
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 32900.41
+    },
+    {
+      "query_id": "q5",
+      "query_original": "query expansion techniques in search engines",
+      "pair_index": 0,
+      "question": "¿Cuál es la principal diferencia entre los métodos tradicionales de expansión de consultas y las técnicas avanzadas como BERT-embedding y Citation Network Analysis (CNA)?",
+      "answer": "Los métodos tradicionales de expansión de consultas, como la expansión por sinonimos, son limitados en su capacidad para proporcionar resultados relevantes y diversificados. En contraste, las técnicas avanzadas como BERT-embedding y Citation Network Analysis (CNA) incorporan el contexto real y las preferencias del usuario, lo que permite obtener resultados más precisos y personalizados.",
+      "contexts": [
+        "Context is King: Rethinking Query Expansion in Modern Search Engines. Resumen estructurado:\n\n1. **Evolution of Query Expansion Techniques**: The paper examines the evolution of query expansion strategies, highlighting their limitations and exploring state-of-the-art techniques such as machine learning models, knowledge graphs, and transformer-based systems like BERT and GPT.\n\n2. **Comparison with Traditional Methods**: Traditional methods like synonym expansion are compared with modern approaches, demonstrating the superior relevance and diversity of results from context-aware systems.\n\n3. **Importance of Real-Time Context and User Preferences**: The study underscores the importance of integrating real-time contextual signals and dynamic user preferences to enhance search engine performance, paving the way for more personalized and accurate retrieval systems.\n\nResumen en español manteniendo términos técnicos:\n\nEste estudio examina la evolución de las estrategias de expansión de consultas, destacando sus limitaciones y explorando técnicas avanzadas como modelos de aprendizaje automático, gráficos de conocimiento y sistemas basados en transformadores como",
+        "BERT-Embedding and Citation Network Analysis based Query Expansion Technique for Scholarly Search. BERT-embedding y análisis de citaciones (CNA) en la expansión de la consulta para mejorar la búsqueda académica.",
+        "Database Indexing Using Deep Learning Algorithms. Resumen estructurado:\n\n1. **Tecnología de Expansión de Consulta**: Este estudio compara técnicas de expansión de consulta en bases de datos, destacando la aplicación de algoritmos de aprendizaje profundo para optimizar índices vectoriales. Se comparan métodos tradicionales (B-Tree, GIN en PostgreSQL) con índices vectoriales utilizando embeddings de Sentence-BERT implementados en FAISS y Milvus.\n\n2. **Resultados de la Comparación**: Se construyó un corpus de 1-5 millones de registros de texto y se realizaron pruebas para evaluar métricas como tiempo de consulta promedio, latencia (95%), tamaño del índice, uso de memoria y métrica de completitud (recall@10) en relación con la búsqueda basada en BM25. Los resultados mostraron que los índices vectoriales alcanzaron un recall@10 de"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_16",
+        "doc_global_18",
+        "doc_global_10"
+      ],
+      "expected_doc_ids": [
+        "doc_global_16",
+        "doc_global_17",
+        "doc_global_18"
+      ],
+      "recall_at_k": 0.6667,
+      "faithfulness": 0.5556,
+      "answer_relevancy": 0.8206,
+      "faithfulness_detail": {
+        "score": 0.5556,
+        "statements": [
+          "La expansión por sinónimos es considerada un método tradicional de expansión de consultas.",
+          "Los métodos tradicionales de expansión de consultas tienen una capacidad limitada para proporcionar resultados relevantes.",
+          "Los métodos tradicionales de expansión de consultas tienen una capacidad limitada para proporcionar resultados diversificados.",
+          "BERT-embedding es una técnica avanzada de expansión de consultas.",
+          "Citation Network Analysis (CNA) es una técnica avanzada de expansión de consultas.",
+          "Las técnicas avanzadas como BERT-embedding y CNA incorporan el contexto real.",
+          "Las técnicas avanzadas como BERT-embedding y CNA incorporan las preferencias del usuario.",
+          "Las técnicas avanzadas de expansión de consultas permiten obtener resultados más precisos.",
+          "Las técnicas avanzadas de expansión de consultas permiten obtener resultados más personalizados."
+        ],
+        "verified": [
+          true,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true
+        ],
+        "n_statements": 9,
+        "n_verified": 5
+      },
+      "answer_relevancy_detail": {
+        "score": 0.8206,
+        "generated_questions": [
+          "¿Qué ventajas ofrecen las técnicas avanzadas como BERT-embedding frente a los métodos tradicionales de expansión de consultas?",
+          "¿Por qué los métodos tradicionales de expansión por sinónimos resultan limitados para obtener resultados precisos y personalizados?",
+          "¿Cómo se comparan los métodos tradicionales y avanzados de expansión de consultas en términos de contexto y relevancia?"
+        ],
+        "similarities": [
+          0.8905,
+          0.7364,
+          0.8348
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 40595.03
+    },
+    {
+      "query_id": "q5",
+      "query_original": "query expansion techniques in search engines",
+      "pair_index": 1,
+      "question": "¿Qué aspectos del estudio de BERT-embedding y CNA se destacan para mejorar la eficiencia de la búsqueda académica?",
+      "answer": "El estudio de BERT-embedding y CNA se centra en la integración de real-time contexto y preferencias del usuario para mejorar la precisión y personalización de la búsqueda académica. Además, utiliza técnicas de aprendizaje profundo para optimizar índices vectoriales, lo que resulta en mejores metadatos y métricas de búsqueda.",
+      "contexts": [
+        "Context is King: Rethinking Query Expansion in Modern Search Engines. Resumen estructurado:\n\n1. **Evolution of Query Expansion Techniques**: The paper examines the evolution of query expansion strategies, highlighting their limitations and exploring state-of-the-art techniques such as machine learning models, knowledge graphs, and transformer-based systems like BERT and GPT.\n\n2. **Comparison with Traditional Methods**: Traditional methods like synonym expansion are compared with modern approaches, demonstrating the superior relevance and diversity of results from context-aware systems.\n\n3. **Importance of Real-Time Context and User Preferences**: The study underscores the importance of integrating real-time contextual signals and dynamic user preferences to enhance search engine performance, paving the way for more personalized and accurate retrieval systems.\n\nResumen en español manteniendo términos técnicos:\n\nEste estudio examina la evolución de las estrategias de expansión de consultas, destacando sus limitaciones y explorando técnicas avanzadas como modelos de aprendizaje automático, gráficos de conocimiento y sistemas basados en transformadores como",
+        "BERT-Embedding and Citation Network Analysis based Query Expansion Technique for Scholarly Search. BERT-embedding y análisis de citaciones (CNA) en la expansión de la consulta para mejorar la búsqueda académica.",
+        "Database Indexing Using Deep Learning Algorithms. Resumen estructurado:\n\n1. **Tecnología de Expansión de Consulta**: Este estudio compara técnicas de expansión de consulta en bases de datos, destacando la aplicación de algoritmos de aprendizaje profundo para optimizar índices vectoriales. Se comparan métodos tradicionales (B-Tree, GIN en PostgreSQL) con índices vectoriales utilizando embeddings de Sentence-BERT implementados en FAISS y Milvus.\n\n2. **Resultados de la Comparación**: Se construyó un corpus de 1-5 millones de registros de texto y se realizaron pruebas para evaluar métricas como tiempo de consulta promedio, latencia (95%), tamaño del índice, uso de memoria y métrica de completitud (recall@10) en relación con la búsqueda basada en BM25. Los resultados mostraron que los índices vectoriales alcanzaron un recall@10 de"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_16",
+        "doc_global_18",
+        "doc_global_10"
+      ],
+      "expected_doc_ids": [
+        "doc_global_16",
+        "doc_global_17",
+        "doc_global_18"
+      ],
+      "recall_at_k": 0.6667,
+      "faithfulness": 0.2222,
+      "answer_relevancy": 0.7509,
+      "faithfulness_detail": {
+        "score": 0.2222,
+        "statements": [
+          "El estudio se centra en BERT-embedding y CNA.",
+          "El estudio integra contexto en tiempo real.",
+          "El estudio integra las preferencias del usuario.",
+          "La integración del contexto y las preferencias busca mejorar la precisión de la búsqueda académica.",
+          "La integración del contexto y las preferencias busca mejorar la personalización de la búsqueda académica.",
+          "El estudio utiliza técnicas de aprendizaje profundo.",
+          "Las técnicas de aprendizaje profundo se utilizan para optimizar índices vectoriales.",
+          "La optimización de los índices vectoriales resulta en mejores metadatos.",
+          "La optimización de los índices vectoriales resulta en mejores métricas de búsqueda."
+        ],
+        "verified": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false
+        ],
+        "n_statements": 9,
+        "n_verified": 2
+      },
+      "answer_relevancy_detail": {
+        "score": 0.7509,
+        "generated_questions": [
+          "¿Cuál es el objetivo principal del estudio sobre BERT-embedding y CNA?",
+          "¿Cómo mejora este estudio la precisión y personalización de la búsqueda académica?",
+          "¿Qué beneficios se obtienen al utilizar aprendizaje profundo para optimizar índices vectoriales?"
+        ],
+        "similarities": [
+          0.8915,
+          0.7521,
+          0.609
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 36092.16
+    },
+    {
+      "query_id": "q5",
+      "query_original": "query expansion techniques in search engines",
+      "pair_index": 2,
+      "question": "¿Qué métricas se utilizaron para evaluar la eficacia de los índices vectoriales en la búsqueda académica?",
+      "answer": "Los índices vectoriales se evaluaron utilizando métricas como el tiempo de consulta promedio, la latencia (95%), el tamaño del índice, la memoria utilizada y la métrica de completitud (recall@10) en relación con la búsqueda basada en BM25. Los resultados demostraron que los índices vectoriales alcanzaron un recall@10 de 95%, lo que indica una mejora significativa en la precisión de la búsqueda académica.",
+      "contexts": [
+        "Context is King: Rethinking Query Expansion in Modern Search Engines. Resumen estructurado:\n\n1. **Evolution of Query Expansion Techniques**: The paper examines the evolution of query expansion strategies, highlighting their limitations and exploring state-of-the-art techniques such as machine learning models, knowledge graphs, and transformer-based systems like BERT and GPT.\n\n2. **Comparison with Traditional Methods**: Traditional methods like synonym expansion are compared with modern approaches, demonstrating the superior relevance and diversity of results from context-aware systems.\n\n3. **Importance of Real-Time Context and User Preferences**: The study underscores the importance of integrating real-time contextual signals and dynamic user preferences to enhance search engine performance, paving the way for more personalized and accurate retrieval systems.\n\nResumen en español manteniendo términos técnicos:\n\nEste estudio examina la evolución de las estrategias de expansión de consultas, destacando sus limitaciones y explorando técnicas avanzadas como modelos de aprendizaje automático, gráficos de conocimiento y sistemas basados en transformadores como",
+        "BERT-Embedding and Citation Network Analysis based Query Expansion Technique for Scholarly Search. BERT-embedding y análisis de citaciones (CNA) en la expansión de la consulta para mejorar la búsqueda académica.",
+        "Database Indexing Using Deep Learning Algorithms. Resumen estructurado:\n\n1. **Tecnología de Expansión de Consulta**: Este estudio compara técnicas de expansión de consulta en bases de datos, destacando la aplicación de algoritmos de aprendizaje profundo para optimizar índices vectoriales. Se comparan métodos tradicionales (B-Tree, GIN en PostgreSQL) con índices vectoriales utilizando embeddings de Sentence-BERT implementados en FAISS y Milvus.\n\n2. **Resultados de la Comparación**: Se construyó un corpus de 1-5 millones de registros de texto y se realizaron pruebas para evaluar métricas como tiempo de consulta promedio, latencia (95%), tamaño del índice, uso de memoria y métrica de completitud (recall@10) en relación con la búsqueda basada en BM25. Los resultados mostraron que los índices vectoriales alcanzaron un recall@10 de"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_16",
+        "doc_global_18",
+        "doc_global_10"
+      ],
+      "expected_doc_ids": [
+        "doc_global_16",
+        "doc_global_17",
+        "doc_global_18"
+      ],
+      "recall_at_k": 0.6667,
+      "faithfulness": 0.7143,
+      "answer_relevancy": 0.9012,
+      "faithfulness_detail": {
+        "score": 0.7143,
+        "statements": [
+          "Los índices vectoriales se evaluaron utilizando el tiempo de consulta promedio como métrica.",
+          "Los índices vectoriales se evaluaron utilizando la latencia (95%) como métrica.",
+          "Los índices vectoriales se evaluaron utilizando el tamaño del índice como métrica.",
+          "Los índices vectoriales se evaluaron utilizando la memoria utilizada como métrica.",
+          "Los índices vectoriales se evaluaron utilizando la métrica de completitud (recall@10) en relación con la búsqueda basada en BM25.",
+          "Los índices vectoriales alcanzaron un recall@10 de 95%.",
+          "Los resultados indican una mejora significativa en la precisión de la búsqueda académica."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+        "n_statements": 7,
+        "n_verified": 5
+      },
+      "answer_relevancy_detail": {
+        "score": 0.9012,
+        "generated_questions": [
+          "¿Qué métricas se utilizaron para evaluar el rendimiento de los índices vectoriales en comparación con BM25?",
+          "¿Cuál fue el resultado obtenido por los índices vectoriales en la métrica recall@10 para la búsqueda académica?",
+          "¿Cómo influyó el uso de índices vectoriales en la precisión de la búsqueda académica durante la evaluación?"
+        ],
+        "similarities": [
+          0.882,
+          0.8859,
+          0.9358
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 25460.55
+    },
+    {
+      "query_id": "q6",
+      "query_original": "hypothetical document embeddings hyde",
+      "pair_index": 0,
+      "question": "¿Qué es SC-HyDE y cómo funciona?",
+      "answer": "SC-HyDE es un sistema de generación basado en la reflexión que combina generación expandida con filtrado de reflexión. Utiliza Hypothetical Document Embeddings (HyDE) para generar una análisis legal imaginativo, que se utiliza para cubrir el giro semántico y restaurar la precisión de la recuperación. Incorpora un módulo de corrección de auto-reflexión para comparar la relevancia de los documentos recuperados con la consulta original, excluyendo la recuperación antes de la segunda etapa.",
+      "contexts": [
+        "SC-HyDE: Mitigating Hallucinations in Chinese Legal Question Answering via Self-Corrected Hypothetical Document Embeddings. Resumen estructurado:\n\n1. SC-HyDE es un sistema de generación basado en la reflexión que combina generación expandida con filtrado de reflexión.\n2. El sistema utiliza Hypothetical Document Embeddings (HyDE) para generar una análisis legal imaginativo, que se utiliza para cubrir el giro semántico y restaurar la precisión de la recuperación.\n3. El sistema incorpora un módulo de corrección de auto-reflexión para comparar la relevancia de los documentos recuperados con la consulta original, excluyendo la recuperación antes de la segunda etapa.\n4. SC-HyDE supera los niveles de RAG y HyDE, reduciendo el porcentaje de falso información del 88,33% a 25,06% y el porcentaje de hallucinación del 25,68% a 13,61%",
+        "Evaluation of Hypothetical Document and Query Embeddings for Information Retrieval Enhancements in the Context of Diverse User Queries. Resumen estructurado:\n\n- El documento se refiere a \"hypothetical document embeddings\" y \"hyde\".\n- Hyde es un algoritmo de aprendizaje automático.\n- Los embeddings documentales hipotéticos son una técnica para representar documentos en un espacio de vectores.\n- Hyde es utilizado para generar embeddings documentales hipotéticos.\n- Los embeddings documentales hipotéticos son una herramienta para comparar y clasificar documentos.\n- Hyde es una herramienta para la representación de documentos en un espacio de vectores.\n- Los embeddings documentales hipotéticos son una técnica para la representación de documentos en un espacio de vectores.\n- Hyde es un algoritmo de aprendizaje automático.\n- Los embeddings documentales hipotéticos son una técnica para la representación de documentos en un espacio de vectores.\n- Hyde es un algoritmo de aprendizaje automático.\n-",
+        "Bridging the Question–Answer Gap in Retrieval-Augmented Generation: Hypothetical Prompt Embeddings. Resumen estructurado:\n\n- **Propuesta de HyPE (Hypothetical Prompt Embeddings)**: Un enfoque que precomputa y indexa múltiples prompts hipotéticos para cada chunk de datos, substituyendo el prompt por el chunk en la embedding, lo que transforma la recuperación en una tarea de pregunta-pregunta y elimina la necesidad de generación sintética de respuestas en tiempo real.\n- **Beneficios**: No introduce latencia, fortalece la alineación entre las consultas y el contexto relevante, y mejora significativamente las precisiones de contexto y recall de la recuperación.\n- **Resultados experimentales**: En seis conjuntos de datos comunes, HyPE aumenta la precisión de contexto en un 42% y la recall de las afirmaciones en un 45%, superando a los métodos estándar, mientras mantiene compatibilidad con re-ranking"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_19",
+        "doc_global_20",
+        "doc_global_21"
+      ],
+      "expected_doc_ids": [
+        "doc_global_19",
+        "doc_global_20",
+        "doc_global_21"
+      ],
+      "recall_at_k": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8631,
+      "faithfulness_detail": {
+        "score": 1.0,
+        "statements": [
+          "SC-HyDE es un sistema de generación basado en la reflexión.",
+          "SC-HyDE combina la generación expandida con el filtrado de reflexión.",
+          "SC-HyDE utiliza Hypothetical Document Embeddings (HyDE).",
+          "SC-HyDE genera un análisis legal imaginativo a través de HyDE.",
+          "El análisis legal imaginativo se utiliza para cubrir el giro semántico.",
+          "El análisis legal imaginativo se utiliza para restaurar la precisión de la recuperación.",
+          "SC-HyDE incorpora un módulo de corrección de auto-reflexión.",
+          "El módulo de corrección de auto-reflexión compara la relevancia de los documentos recuperados con la consulta original.",
+          "El módulo de corrección de auto-reflexión excluye la recuperación antes de la segunda etapa."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "n_statements": 9,
+        "n_verified": 9
+      },
+      "answer_relevancy_detail": {
+        "score": 0.8631,
+        "generated_questions": [
+          "¿Qué es el sistema SC-HyDE y cuál es su objetivo principal?",
+          "¿Cómo utiliza SC-HyDE los Hypothetical Document Embeddings (HyDE) para mejorar la precisión en la recuperación de información?",
+          "¿Qué función cumple el módulo de corrección de auto-reflexión dentro de SC-HyDE?"
+        ],
+        "similarities": [
+          0.9551,
+          0.8138,
+          0.8203
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 25547.03
+    },
+    {
+      "query_id": "q6",
+      "query_original": "hypothetical document embeddings hyde",
+      "pair_index": 1,
+      "question": "¿Qué es Hyde y cómo se utiliza?",
+      "answer": "Hyde es un algoritmo de aprendizaje automático. Los embeddings documentales hipotéticos son una técnica para representar documentos en un espacio de vectores. Hyde es utilizado para generar embeddings documentales hipotéticos. Los embeddings documentales hipotéticos son una herramienta para comparar y clasificar documentos. Hyde es una herramienta para la representación de documentos en un espacio de vectores.",
+      "contexts": [
+        "SC-HyDE: Mitigating Hallucinations in Chinese Legal Question Answering via Self-Corrected Hypothetical Document Embeddings. Resumen estructurado:\n\n1. SC-HyDE es un sistema de generación basado en la reflexión que combina generación expandida con filtrado de reflexión.\n2. El sistema utiliza Hypothetical Document Embeddings (HyDE) para generar una análisis legal imaginativo, que se utiliza para cubrir el giro semántico y restaurar la precisión de la recuperación.\n3. El sistema incorpora un módulo de corrección de auto-reflexión para comparar la relevancia de los documentos recuperados con la consulta original, excluyendo la recuperación antes de la segunda etapa.\n4. SC-HyDE supera los niveles de RAG y HyDE, reduciendo el porcentaje de falso información del 88,33% a 25,06% y el porcentaje de hallucinación del 25,68% a 13,61%",
+        "Evaluation of Hypothetical Document and Query Embeddings for Information Retrieval Enhancements in the Context of Diverse User Queries. Resumen estructurado:\n\n- El documento se refiere a \"hypothetical document embeddings\" y \"hyde\".\n- Hyde es un algoritmo de aprendizaje automático.\n- Los embeddings documentales hipotéticos son una técnica para representar documentos en un espacio de vectores.\n- Hyde es utilizado para generar embeddings documentales hipotéticos.\n- Los embeddings documentales hipotéticos son una herramienta para comparar y clasificar documentos.\n- Hyde es una herramienta para la representación de documentos en un espacio de vectores.\n- Los embeddings documentales hipotéticos son una técnica para la representación de documentos en un espacio de vectores.\n- Hyde es un algoritmo de aprendizaje automático.\n- Los embeddings documentales hipotéticos son una técnica para la representación de documentos en un espacio de vectores.\n- Hyde es un algoritmo de aprendizaje automático.\n-",
+        "Bridging the Question–Answer Gap in Retrieval-Augmented Generation: Hypothetical Prompt Embeddings. Resumen estructurado:\n\n- **Propuesta de HyPE (Hypothetical Prompt Embeddings)**: Un enfoque que precomputa y indexa múltiples prompts hipotéticos para cada chunk de datos, substituyendo el prompt por el chunk en la embedding, lo que transforma la recuperación en una tarea de pregunta-pregunta y elimina la necesidad de generación sintética de respuestas en tiempo real.\n- **Beneficios**: No introduce latencia, fortalece la alineación entre las consultas y el contexto relevante, y mejora significativamente las precisiones de contexto y recall de la recuperación.\n- **Resultados experimentales**: En seis conjuntos de datos comunes, HyPE aumenta la precisión de contexto en un 42% y la recall de las afirmaciones en un 45%, superando a los métodos estándar, mientras mantiene compatibilidad con re-ranking"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_19",
+        "doc_global_20",
+        "doc_global_21"
+      ],
+      "expected_doc_ids": [
+        "doc_global_19",
+        "doc_global_20",
+        "doc_global_21"
+      ],
+      "recall_at_k": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7654,
+      "faithfulness_detail": {
+        "score": 1.0,
+        "statements": [
+          "Hyde es un algoritmo de aprendizaje automático.",
+          "Los embeddings documentales hipotéticos son una técnica para representar documentos en un espacio de vectores.",
+          "Hyde es utilizado para generar embeddings documentales hipotéticos.",
+          "Los embeddings documentales hipotéticos son una herramienta para comparar documentos.",
+          "Los embeddings documentales hipotéticos son una herramienta para clasificar documentos.",
+          "Hyde es una herramienta para la representación de documentos en un espacio de vectores."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "n_statements": 6,
+        "n_verified": 6
+      },
+      "answer_relevancy_detail": {
+        "score": 0.7654,
+        "generated_questions": [
+          "¿Qué es Hyde y cuál es su función en el aprendizaje automático?",
+          "¿Qué son los embeddings documentales hipotéticos y para qué sirven?",
+          "¿Cómo se relacionan el algoritmo Hyde y los embeddings documentales hipotéticos en la representación de documentos?"
+        ],
+        "similarities": [
+          0.905,
+          0.611,
+          0.7802
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 18967.02
+    },
+    {
+      "query_id": "q6",
+      "query_original": "hypothetical document embeddings hyde",
+      "pair_index": 2,
+      "question": "¿Qué mejoras ha logrado SC-HyDE en comparación con otros sistemas?",
+      "answer": "SC-HyDE ha superado los niveles de RAG y HyDE, reduciendo el porcentaje de falso información del 88,33% a 25,06% y el porcentaje de hallucinación del 25,68% a 13,61%.",
+      "contexts": [
+        "SC-HyDE: Mitigating Hallucinations in Chinese Legal Question Answering via Self-Corrected Hypothetical Document Embeddings. Resumen estructurado:\n\n1. SC-HyDE es un sistema de generación basado en la reflexión que combina generación expandida con filtrado de reflexión.\n2. El sistema utiliza Hypothetical Document Embeddings (HyDE) para generar una análisis legal imaginativo, que se utiliza para cubrir el giro semántico y restaurar la precisión de la recuperación.\n3. El sistema incorpora un módulo de corrección de auto-reflexión para comparar la relevancia de los documentos recuperados con la consulta original, excluyendo la recuperación antes de la segunda etapa.\n4. SC-HyDE supera los niveles de RAG y HyDE, reduciendo el porcentaje de falso información del 88,33% a 25,06% y el porcentaje de hallucinación del 25,68% a 13,61%",
+        "Evaluation of Hypothetical Document and Query Embeddings for Information Retrieval Enhancements in the Context of Diverse User Queries. Resumen estructurado:\n\n- El documento se refiere a \"hypothetical document embeddings\" y \"hyde\".\n- Hyde es un algoritmo de aprendizaje automático.\n- Los embeddings documentales hipotéticos son una técnica para representar documentos en un espacio de vectores.\n- Hyde es utilizado para generar embeddings documentales hipotéticos.\n- Los embeddings documentales hipotéticos son una herramienta para comparar y clasificar documentos.\n- Hyde es una herramienta para la representación de documentos en un espacio de vectores.\n- Los embeddings documentales hipotéticos son una técnica para la representación de documentos en un espacio de vectores.\n- Hyde es un algoritmo de aprendizaje automático.\n- Los embeddings documentales hipotéticos son una técnica para la representación de documentos en un espacio de vectores.\n- Hyde es un algoritmo de aprendizaje automático.\n-",
+        "Bridging the Question–Answer Gap in Retrieval-Augmented Generation: Hypothetical Prompt Embeddings. Resumen estructurado:\n\n- **Propuesta de HyPE (Hypothetical Prompt Embeddings)**: Un enfoque que precomputa y indexa múltiples prompts hipotéticos para cada chunk de datos, substituyendo el prompt por el chunk en la embedding, lo que transforma la recuperación en una tarea de pregunta-pregunta y elimina la necesidad de generación sintética de respuestas en tiempo real.\n- **Beneficios**: No introduce latencia, fortalece la alineación entre las consultas y el contexto relevante, y mejora significativamente las precisiones de contexto y recall de la recuperación.\n- **Resultados experimentales**: En seis conjuntos de datos comunes, HyPE aumenta la precisión de contexto en un 42% y la recall de las afirmaciones en un 45%, superando a los métodos estándar, mientras mantiene compatibilidad con re-ranking"
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_19",
+        "doc_global_20",
+        "doc_global_21"
+      ],
+      "expected_doc_ids": [
+        "doc_global_19",
+        "doc_global_20",
+        "doc_global_21"
+      ],
+      "recall_at_k": 1.0,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7639,
+      "faithfulness_detail": {
+        "score": 1.0,
+        "statements": [
+          "SC-HyDE ha superado los niveles de RAG.",
+          "SC-HyDE ha superado los niveles de HyDE.",
+          "SC-HyDE redujo el porcentaje de falsa información del 88,33% al 25,06%.",
+          "SC-HyDE redujo el porcentaje de alucinación del 25,68% al 13,61%."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "n_statements": 4,
+        "n_verified": 4
+      },
+      "answer_relevancy_detail": {
+        "score": 0.7639,
+        "generated_questions": [
+          "¿Cuáles son las mejoras que ofrece SC-HyDE en comparación con RAG y HyDE?",
+          "¿En qué porcentaje logra reducir SC-HyDE la información falsa y las alucinaciones?",
+          "¿Qué modelo ha logrado disminuir la información falsa al 25,06% y las alucinaciones al 13,61%?"
+        ],
+        "similarities": [
+          0.9078,
+          0.8228,
+          0.561
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 16247.57
+    },
+    {
+      "query_id": "q7",
+      "query_original": "reranking models for information retrieval",
+      "pair_index": 0,
+      "question": "¿Cuál es la principal diferencia entre los modelos de re-ranking utilizados en la recuperación de documentos y los modelos neuronales avanzados como los encadenadores cruzados y los modelos de generación secuencial?",
+      "answer": "Los modelos de re-ranking utilizados en la recuperación de documentos, como los encadenadores cruzados y los modelos de generación secuencial como T5, son fundamentales en la evolución de los modelos de re-ranking. Estos modelos se basan en técnicas de aprendizaje automático y redes neuronales para mejorar la eficiencia y precisión de la recuperación de información. Por otro lado, los modelos neuronales avanzados como los encadenadores cruzados y los modelos de generación secuencial son desarrollados específicamente para la recuperación de información estructural, lo que los hace más eficientes en términos de precisión y eficiencia.",
+      "contexts": [
+        "The Evolution of Reranking Models in Information Retrieval: From Heuristic Methods to Large Language Models. Este estudio examina la evolución y los avances en los modelos de re-ranking para la recuperación de información (IR). Se presenta una revisión detallada de los modelos de re-ranking utilizados en la recuperación de documentos, especialmente en pipelines de generación de recuperación (RAG). Se analiza la evolución de los métodos de re-ranking, desde las técnicas fundamentales hasta las arquitecturas neuronales avanzadas como los encadenadores cruzados, los modelos de generación secuencial como T5, y las redes neuronales de gráficos (GNNs) para la recuperación de información estructural. Se examinan técnicas para mejorar la eficiencia de los modelos de re-ranking, como la distilación de conocimiento para crear alternativas más eficientes. Además, se examinan las estrategias de prompting y la fine-tuning de modelos de LLMs en el proceso de re-ranking.",
+        "Integrating Deep Learning Techniques in Information Retrieval: A Hybrid Approach to Relevance Optimization. El trabajo propone un enfoque de recuperación de información basado en modelos de ranking que combina el uso de modelos de ranking neuronales y embeddings lexicales. Los resultados muestran un aumento del 25-30% en la recall y un 12% en la precisión media ponderada (MAP) en comparación con modelos tradicionales. Además, la satisfacción del usuario se incrementó en 15-20% para consultas ambigas o específicas de dominio. Los hallazgos sugieren que la combinación de señales lexicales y semánticas mejora significativamente la relevancia de recuperación y la experiencia del usuario.",
+        "Rank1: Test-Time Compute for Reranking in Information Retrieval. Rank1 es el primer modelo de re-ranking entrenado para aprovechar el cálculo en tiempo de prueba. Este modelo demuestra la aplicación del lenguaje de razonamiento (como o1 de OpenAI o R1 de Deepseek) para la distensión, lo que rápidamente mejora la performance de un modelo más pequeño. \n\nRank1 muestra un rendimiento superior en los conjuntos de datos de razonamiento avanzado y instrucciones, y es capaz de responder a prompts de entrada del usuario. Además, tiene una cadena de razonamiento explicable que puede ser dada a los usuarios o a sistemas basados en RAG. \n\nAdemás, los modelos entrenados en este dataset mantienen una alta performance en términos de rendimiento y uso de recursos, especialmente en términos de memoria y recursos computacionales."
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_22",
+        "doc_global_14",
+        "doc_global_23"
+      ],
+      "expected_doc_ids": [
+        "doc_global_22",
+        "doc_global_23",
+        "doc_global_24"
+      ],
+      "recall_at_k": 0.6667,
+      "faithfulness": 0.4615,
+      "answer_relevancy": 0.8157,
+      "faithfulness_detail": {
+        "score": 0.4615,
+        "statements": [
+          "Los modelos de re-ranking se utilizan en la recuperación de documentos.",
+          "Los encadenadores cruzados son un ejemplo de modelos de re-ranking.",
+          "Los modelos de generación secuencial son un ejemplo de modelos de re-ranking.",
+          "T5 es un ejemplo de modelo de generación secuencial.",
+          "Los encadenadores cruzados y los modelos de generación secuencial son fundamentales en la evolución de los modelos de re-ranking.",
+          "Los modelos de re-ranking se basan en técnicas de aprendizaje automático.",
+          "Los modelos de re-ranking se basan en redes neuronales.",
+          "Los modelos de re-ranking buscan mejorar la eficiencia de la recuperación de información.",
+          "Los modelos de re-ranking buscan mejorar la precisión de la recuperación de información.",
+          "Los encadenadores cruzados y los modelos de generación secuencial son considerados modelos neuronales avanzados.",
+          "Los modelos neuronales avanzados son desarrollados específicamente para la recuperación de información estructural.",
+          "El desarrollo específico para información estructural hace a estos modelos más precisos.",
+          "El desarrollo específico para información estructural hace a estos modelos más eficientes."
+        ],
+        "verified": [
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false
+        ],
+        "n_statements": 13,
+        "n_verified": 6
+      },
+      "answer_relevancy_detail": {
+        "score": 0.8157,
+        "generated_questions": [
+          "¿Qué función cumplen los modelos de re-ranking como los encadenadores cruzados y T5 en la recuperación de documentos?",
+          "¿En qué técnicas se basan los modelos de re-ranking avanzados para mejorar la recuperación de información?",
+          "¿Qué ventajas ofrecen los modelos neuronales avanzados en la recuperación de información estructural?"
+        ],
+        "similarities": [
+          0.842,
+          0.8422,
+          0.7629
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 45422.37
+    },
+    {
+      "query_id": "q7",
+      "query_original": "reranking models for information retrieval",
+      "pair_index": 1,
+      "question": "¿Qué técnicas se utilizan para mejorar la eficiencia de los modelos de re-ranking?",
+      "answer": "Para mejorar la eficiencia de los modelos de re-ranking, se utilizan técnicas como la distilación de conocimiento. Esta técnica se utiliza para crear alternativas más eficientes a partir de modelos más grandes, lo que reduce la necesidad de recursos computacionales y mejora la precisión del modelo.",
+      "contexts": [
+        "The Evolution of Reranking Models in Information Retrieval: From Heuristic Methods to Large Language Models. Este estudio examina la evolución y los avances en los modelos de re-ranking para la recuperación de información (IR). Se presenta una revisión detallada de los modelos de re-ranking utilizados en la recuperación de documentos, especialmente en pipelines de generación de recuperación (RAG). Se analiza la evolución de los métodos de re-ranking, desde las técnicas fundamentales hasta las arquitecturas neuronales avanzadas como los encadenadores cruzados, los modelos de generación secuencial como T5, y las redes neuronales de gráficos (GNNs) para la recuperación de información estructural. Se examinan técnicas para mejorar la eficiencia de los modelos de re-ranking, como la distilación de conocimiento para crear alternativas más eficientes. Además, se examinan las estrategias de prompting y la fine-tuning de modelos de LLMs en el proceso de re-ranking.",
+        "Integrating Deep Learning Techniques in Information Retrieval: A Hybrid Approach to Relevance Optimization. El trabajo propone un enfoque de recuperación de información basado en modelos de ranking que combina el uso de modelos de ranking neuronales y embeddings lexicales. Los resultados muestran un aumento del 25-30% en la recall y un 12% en la precisión media ponderada (MAP) en comparación con modelos tradicionales. Además, la satisfacción del usuario se incrementó en 15-20% para consultas ambigas o específicas de dominio. Los hallazgos sugieren que la combinación de señales lexicales y semánticas mejora significativamente la relevancia de recuperación y la experiencia del usuario.",
+        "Rank1: Test-Time Compute for Reranking in Information Retrieval. Rank1 es el primer modelo de re-ranking entrenado para aprovechar el cálculo en tiempo de prueba. Este modelo demuestra la aplicación del lenguaje de razonamiento (como o1 de OpenAI o R1 de Deepseek) para la distensión, lo que rápidamente mejora la performance de un modelo más pequeño. \n\nRank1 muestra un rendimiento superior en los conjuntos de datos de razonamiento avanzado y instrucciones, y es capaz de responder a prompts de entrada del usuario. Además, tiene una cadena de razonamiento explicable que puede ser dada a los usuarios o a sistemas basados en RAG. \n\nAdemás, los modelos entrenados en este dataset mantienen una alta performance en términos de rendimiento y uso de recursos, especialmente en términos de memoria y recursos computacionales."
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_22",
+        "doc_global_14",
+        "doc_global_23"
+      ],
+      "expected_doc_ids": [
+        "doc_global_22",
+        "doc_global_23",
+        "doc_global_24"
+      ],
+      "recall_at_k": 0.6667,
+      "faithfulness": 0.25,
+      "answer_relevancy": 0.7708,
+      "faithfulness_detail": {
+        "score": 0.25,
+        "statements": [
+          "Se utilizan técnicas como la distilación de conocimiento para mejorar la eficiencia de los modelos de re-ranking.",
+          "La distilación de conocimiento se utiliza para crear alternativas más eficientes a partir de modelos más grandes.",
+          "La distilación de conocimiento reduce la necesidad de recursos computacionales.",
+          "La distilación de conocimiento mejora la precisión del modelo."
+        ],
+        "verified": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "n_statements": 4,
+        "n_verified": 1
+      },
+      "answer_relevancy_detail": {
+        "score": 0.7708,
+        "generated_questions": [
+          "¿Cómo se puede mejorar la eficiencia de los modelos de re-ranking?",
+          "¿Qué ventajas ofrece la técnica de distilación de conocimiento en modelos de lenguaje?",
+          "¿De qué manera se puede reducir la necesidad de recursos computacionales al trabajar con modelos grandes?"
+        ],
+        "similarities": [
+          0.9797,
+          0.6423,
+          0.6904
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 20156.65
+    },
+    {
+      "query_id": "q7",
+      "query_original": "reranking models for information retrieval",
+      "pair_index": 2,
+      "question": "¿Qué estrategias se utilizan para mejorar la satisfacción del usuario en el proceso de re-ranking?",
+      "answer": "En el proceso de re-ranking, se utilizan estrategias como la fine-tuning de modelos de LLMs para mejorar la satisfacción del usuario. Además, se examinan técnicas como la distilación de conocimiento para crear alternativas más eficientes, lo que aumenta la eficiencia del modelo y mejora la precisión del proceso de re-ranking.",
+      "contexts": [
+        "The Evolution of Reranking Models in Information Retrieval: From Heuristic Methods to Large Language Models. Este estudio examina la evolución y los avances en los modelos de re-ranking para la recuperación de información (IR). Se presenta una revisión detallada de los modelos de re-ranking utilizados en la recuperación de documentos, especialmente en pipelines de generación de recuperación (RAG). Se analiza la evolución de los métodos de re-ranking, desde las técnicas fundamentales hasta las arquitecturas neuronales avanzadas como los encadenadores cruzados, los modelos de generación secuencial como T5, y las redes neuronales de gráficos (GNNs) para la recuperación de información estructural. Se examinan técnicas para mejorar la eficiencia de los modelos de re-ranking, como la distilación de conocimiento para crear alternativas más eficientes. Además, se examinan las estrategias de prompting y la fine-tuning de modelos de LLMs en el proceso de re-ranking.",
+        "Integrating Deep Learning Techniques in Information Retrieval: A Hybrid Approach to Relevance Optimization. El trabajo propone un enfoque de recuperación de información basado en modelos de ranking que combina el uso de modelos de ranking neuronales y embeddings lexicales. Los resultados muestran un aumento del 25-30% en la recall y un 12% en la precisión media ponderada (MAP) en comparación con modelos tradicionales. Además, la satisfacción del usuario se incrementó en 15-20% para consultas ambigas o específicas de dominio. Los hallazgos sugieren que la combinación de señales lexicales y semánticas mejora significativamente la relevancia de recuperación y la experiencia del usuario.",
+        "Rank1: Test-Time Compute for Reranking in Information Retrieval. Rank1 es el primer modelo de re-ranking entrenado para aprovechar el cálculo en tiempo de prueba. Este modelo demuestra la aplicación del lenguaje de razonamiento (como o1 de OpenAI o R1 de Deepseek) para la distensión, lo que rápidamente mejora la performance de un modelo más pequeño. \n\nRank1 muestra un rendimiento superior en los conjuntos de datos de razonamiento avanzado y instrucciones, y es capaz de responder a prompts de entrada del usuario. Además, tiene una cadena de razonamiento explicable que puede ser dada a los usuarios o a sistemas basados en RAG. \n\nAdemás, los modelos entrenados en este dataset mantienen una alta performance en términos de rendimiento y uso de recursos, especialmente en términos de memoria y recursos computacionales."
+      ],
+      "retrieved_doc_ids": [
+        "doc_global_22",
+        "doc_global_14",
+        "doc_global_23"
+      ],
+      "expected_doc_ids": [
+        "doc_global_22",
+        "doc_global_23",
+        "doc_global_24"
+      ],
+      "recall_at_k": 0.6667,
+      "faithfulness": 0.6667,
+      "answer_relevancy": 0.8502,
+      "faithfulness_detail": {
+        "score": 0.6667,
+        "statements": [
+          "En el proceso de re-ranking se utiliza la estrategia de fine-tuning de modelos de LLMs.",
+          "El fine-tuning de modelos de LLMs se aplica para mejorar la satisfacción del usuario.",
+          "En el proceso de re-ranking se examinan técnicas como la destilación de conocimiento.",
+          "La destilación de conocimiento se utiliza para crear alternativas más eficientes.",
+          "La destilación de conocimiento aumenta la eficiencia del modelo.",
+          "La destilación de conocimiento mejora la precisión del proceso de re-ranking."
+        ],
+        "verified": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          false
+        ],
+        "n_statements": 6,
+        "n_verified": 4
+      },
+      "answer_relevancy_detail": {
+        "score": 0.8502,
+        "generated_questions": [
+          "¿Qué estrategias y técnicas se utilizan en el proceso de re-ranking para mejorar sus resultados?",
+          "¿De qué manera ayuda la distilación de conocimiento a mejorar la eficiencia en el re-ranking?",
+          "¿Qué papel juega el fine-tuning de modelos LLM en la mejora de la satisfacción del usuario dentro del re-ranking?"
+        ],
+        "similarities": [
+          0.9111,
+          0.7964,
+          0.8431
+        ]
+      },
+      "generator_status": "success",
+      "status": "ok",
+      "error": "",
+      "latency_ms": 25090.94
+    }
+  ]
+}
